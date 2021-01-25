@@ -42,7 +42,7 @@ public class EnemiBehaviour : MonoBehaviour
             transform.Translate(Vector3.right * Time.deltaTime * 2);
         }
 
-        if (life < 0)
+        if (life <= 0)
         {
             gameObject.SetActive(false);
         }

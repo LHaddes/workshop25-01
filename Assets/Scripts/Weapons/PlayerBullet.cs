@@ -17,13 +17,13 @@ public class PlayerBullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Walls"))
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
         if (other.gameObject.CompareTag("Enemy"))
         {
-            //TODO Dégâts appliqués à l'ennemi
-            Destroy(gameObject);
+            other.gameObject.GetComponent<EnemiBehaviour>().life--;
+            gameObject.SetActive(false);
         }
     }
 }
