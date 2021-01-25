@@ -15,9 +15,12 @@ public class PlayerShoot : MonoBehaviour
     public float fireRate;
     private float _nextFire;
     public Transform firePoint;
+    public ObjectPooler objectPooler;
 
     void Start()
     {
+        objectPooler = ObjectPooler.objectPooler;
+        
         actualWeaponID = 0;
         actualWeapon = inventory[actualWeaponID];
     }
@@ -92,7 +95,7 @@ public class PlayerShoot : MonoBehaviour
         {
             Debug.Log("Shoot" + fireRate);
             //TODO Tir du player
-            //GameObject obj = Instantiate(bulletPrefab, firePointTransform.position, firePointTransform.rotation);
+            GameObject obj = objectPooler.SpawnFromPool("PlayerBullet", firePoint.position, firePoint.rotation);
         }
     }
 }
