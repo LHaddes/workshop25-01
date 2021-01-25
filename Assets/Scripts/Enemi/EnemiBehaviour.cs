@@ -39,6 +39,7 @@ public class EnemiBehaviour : MonoBehaviour
             Vector3 dir = player.transform.position - transform.position;
             float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.Translate(Vector3.right * Time.deltaTime * 2);
         }
 
         if (life < 0)
