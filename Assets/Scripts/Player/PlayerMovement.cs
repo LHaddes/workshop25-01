@@ -13,7 +13,6 @@ public class PlayerMovement : MonoBehaviour
 
     [Space]
     [Header("Rotation")]
-    public Vector3 _mousePos;
     private Camera cam;
     public float angle;
     
@@ -47,9 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void PlayerRotation()
     {
-        _mousePos = cam.ScreenToWorldPoint(Input.mousePosition);    //On récupère constamment la position de la souris
-
-        Vector3 mouse = Input.mousePosition;
+    Vector3 mouse = Input.mousePosition;
 
         Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.GetChild(0).position);
             
