@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - tag: BaseBullet
-    prefab: {fileID: 9097046077280020577, guid: 57e6632ee7b03074eb7cab41376100b3,
+    prefab: {fileID: 8659059453474352633, guid: 484ba6feda2806f4aa03b11ba0779d31,
       type: 3}
     size: 20
   - tag: UpBullet
