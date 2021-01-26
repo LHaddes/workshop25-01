@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class PlayerKidIcariusShoot : MonoBehaviour
+public class Player2KidIcariusShoot : MonoBehaviour
 {
     public float movementX, movementY;
     public Transform spawnPoint;
@@ -11,19 +11,19 @@ public class PlayerKidIcariusShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movementX = GetComponent<PlayerKidIcariusMovement>().xMove;
-        movementY = GetComponent<PlayerKidIcariusMovement>().yMove;
+        movementX = GetComponent<Player2KidIcarius>().xMove;
+        movementY = GetComponent<Player2KidIcarius>().yMove;
             
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("P2Fire1"))
         {
             Shoot();
         }
-        
     }
 
     public void Shoot()
     {
         ObjectPooler.objectPooler.SpawnFromPool("BaseBullet", spawnPoint.position, spawnPoint.rotation);
+        
         
         if (movementX > 0)
         {
