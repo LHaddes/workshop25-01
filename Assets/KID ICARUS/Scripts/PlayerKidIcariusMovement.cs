@@ -9,6 +9,7 @@ public class PlayerKidIcariusMovement : MonoBehaviour
 
     public float forceJump;
     public float speed;
+    public int jumpCount;
     [HideInInspector]
     public float xMove;
     public float yMove;
@@ -33,22 +34,31 @@ public class PlayerKidIcariusMovement : MonoBehaviour
         GunRotation();
         if (_canJump && Input.GetKeyDown(KeyCode.Space))
         {
-            Jump();
+            Jump(Vector2.up);
         }
 
         transform.position += new Vector3(xMove, 0, 0).normalized * speed * Time.deltaTime;
     }
 
-    void Jump()
+    void Jump(Vector2 dir)
     {
-        _rb.AddForce(new Vector2(0, forceJump));
-        _canJump = false;
+        jumpCount++;
+        
+        _rb.velocity = new Vector2(_rb.velocity.x, 0);
+        _rb.velocity += dir * forceJump;
+        
+        if (jumpCount >= 2)
+        {
+            _canJump = false;
+            jumpCount = 0;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Walls"))
+        if (other.gameObject.CompareTag("Ground"))
         {
+            jumpCount = 0;
             _canJump = true;
         }
     }
