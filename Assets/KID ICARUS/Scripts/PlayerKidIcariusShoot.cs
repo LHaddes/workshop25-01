@@ -17,7 +17,7 @@ public class PlayerKidIcariusShoot : MonoBehaviour
         float mousePositionY = mousePosition.y;
         float playerPositionX = transform.position.x;
         float playerPositionY = transform.position.y;
-        
+
         if (movementX > 0 && mousePositionX > playerPositionX)
         {
             //TODO le player va à droite et regarde à droite
@@ -43,11 +43,11 @@ public class PlayerKidIcariusShoot : MonoBehaviour
         {
             //TODO le player va en haut et regarde en bas
         }
-        else if (movementY <0 && mousePositionY > playerPositionY)
+        else if (movementY < 0 && mousePositionY > playerPositionY)
         {
             //TODO le player va en bas et regarde en haut
         }
-        else if (movementY <0 && mousePositionY < playerPositionY)
+        else if (movementY < 0 && mousePositionY < playerPositionY)
         {
             //TODO le player va en bas et regarde en bas
         }
