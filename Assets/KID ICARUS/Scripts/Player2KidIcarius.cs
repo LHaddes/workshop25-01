@@ -19,6 +19,8 @@ public class Player2KidIcarius : MonoBehaviour
 
     private Rigidbody2D _rb;
 
+    public Vector3 lookDirection;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +67,8 @@ public class Player2KidIcarius : MonoBehaviour
     public void GunRotation()
     {
         Vector2 lookDir = new Vector2(Input.GetAxis("P2HorizontalAim"), Input.GetAxis("P2VerticalAim"));
+        lookDirection = lookDir;
+        
         if (lookDir.magnitude > 0f)
         {
             _angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;

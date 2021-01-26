@@ -12,6 +12,9 @@ public class PlayerKidIcariusShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        movementX = GetComponent<PlayerKidIcariusMovement>().xMove;
+        movementY = GetComponent<PlayerKidIcariusMovement>().yMove;
+        
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
@@ -20,9 +23,6 @@ public class PlayerKidIcariusShoot : MonoBehaviour
 
     public void Shoot()
     {
-        movementX = GetComponent<PlayerKidIcariusMovement>().xMove;
-        movementY = GetComponent<PlayerKidIcariusMovement>().yMove;
-
         Vector3 mousePosition = Input.mousePosition;
 
         float mousePositionX = mousePosition.x;
