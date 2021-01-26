@@ -20,6 +20,8 @@ public class PlayerKidIcariusMovement : MonoBehaviour
 
     private Rigidbody2D _rb;
 
+    public Vector2 lookDirection;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,5 +75,7 @@ public class PlayerKidIcariusMovement : MonoBehaviour
         _angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90;
 
         directionShoot.transform.rotation = Quaternion.Euler(0, 0, _angle);
+
+        lookDirection = lookDir;
     }
 }

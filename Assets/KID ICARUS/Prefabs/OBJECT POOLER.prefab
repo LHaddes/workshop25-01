@@ -61,6 +61,5 @@ MonoBehaviour:
       type: 3}
     size: 20
   - tag: BackBullet
-    prefab: {fileID: 9097046077280020577, guid: 57e6632ee7b03074eb7cab41376100b3,
-      type: 3}
+    prefab: {fileID: 642785320921677411, guid: 2b41cfa145341254db6c94e5700ce92c, type: 3}
     size: 20
