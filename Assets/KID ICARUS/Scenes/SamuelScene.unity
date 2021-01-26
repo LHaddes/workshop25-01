@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 855593533}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Walls
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -437,6 +437,7 @@ GameObject:
   - component: {fileID: 1457708683}
   - component: {fileID: 1457708682}
   - component: {fileID: 1457708686}
+  - component: {fileID: 1457708687}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -456,8 +457,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b104fa6e16144e74e977616038152bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceJump: 330
+  forceJump: 7
   speed: 5
+  jumpCount: 0
   xMove: 0
   yMove: 0
   directionShoot: {fileID: 843463277}
@@ -526,6 +528,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb11d1bbd38869d419fb28238c33d684, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1457708687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457708681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6726fba56e211ab4db20a415378b35e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 6
+  lowJumpMultiplier: 4
 --- !u!1 &1537769833
 GameObject:
   m_ObjectHideFlags: 0
