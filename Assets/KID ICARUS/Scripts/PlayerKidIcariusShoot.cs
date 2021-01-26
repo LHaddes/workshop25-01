@@ -37,8 +37,19 @@ public class PlayerKidIcariusShoot : MonoBehaviour
         }
         else if (movementY > 0 && mousePositionY > playerPositionY)
         {
-            //TODO le joueur va en haut et regarde en haut
+            //TODO le player va en haut et regarde en haut
         }
-        
+        else if (movementY > 0 && mousePositionY < playerPositionY)
+        {
+            //TODO le player va en haut et regarde en bas
+        }
+        else if (movementY <0 && mousePositionY > playerPositionY)
+        {
+            //TODO le player va en bas et regarde en haut
+        }
+        else if (movementY <0 && mousePositionY < playerPositionY)
+        {
+            //TODO le player va en bas et regarde en bas
+        }
     }
 }
