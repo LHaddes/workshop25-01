@@ -238,8 +238,11 @@
         </e>
         <e p="KID ICARUS" t="Include">
           <e p="Scripts" t="Include">
+            <e p="BaseBullet.cs" t="Include" />
             <e p="BetterJumping.cs" t="Include" />
+            <e p="IABullets.cs" t="Include" />
             <e p="Player2KidIcarius.cs" t="Include" />
+            <e p="Player2KidIcariusShoot.cs" t="Include" />
             <e p="PlayerKidIcariusMovement.cs" t="Include" />
             <e p="PlayerKidIcariusShoot.cs" t="Include" />
           </e>
