@@ -518,8 +518,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6726fba56e211ab4db20a415378b35e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 6
-  lowJumpMultiplier: 4
+  fallMultiplier: 4
+  lowJumpMultiplier: 7
 --- !u!114 &1150464968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,7 +544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd877641c806dd42b1cb3a65718acf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceJump: 7
+  forceJump: 6
   speed: 5
   jumpCount: 0
   xMove: 0
@@ -717,7 +717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b104fa6e16144e74e977616038152bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceJump: 7
+  forceJump: 6
   speed: 5
   jumpCount: 0
   xMove: 0
@@ -800,8 +800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6726fba56e211ab4db20a415378b35e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 6
-  lowJumpMultiplier: 4
+  fallMultiplier: 4
+  lowJumpMultiplier: 7
 --- !u!1 &1537769833
 GameObject:
   m_ObjectHideFlags: 0

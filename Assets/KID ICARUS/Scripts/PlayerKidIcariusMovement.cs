@@ -32,7 +32,7 @@ public class PlayerKidIcariusMovement : MonoBehaviour
         xMove = Input.GetAxisRaw("Horizontal");
         yMove = Input.GetAxisRaw("Vertical");
         GunRotation();
-        if (_canJump && Input.GetKeyDown(KeyCode.Space))
+        if (_canJump && Input.GetButtonDown("Jump"))
         {
             Jump(Vector2.up);
         }

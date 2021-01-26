@@ -28,10 +28,10 @@ public class Player2KidIcarius : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xMove = Input.GetAxisRaw("Horizontal2");
-        yMove = Input.GetAxisRaw("Vertical2");
+        xMove = Input.GetAxisRaw("P2Horizontal");
+        yMove = Input.GetAxisRaw("P2Vertical");
         GunRotation();
-        if (_canJump && Input.GetKeyDown(KeyCode.Keypad0))
+        if (_canJump && Input.GetButtonDown("P2Jump"))
         {
             Jump(Vector2.up);
         }
@@ -64,13 +64,12 @@ public class Player2KidIcarius : MonoBehaviour
 
     public void GunRotation()
     {
-        Vector3 mouse = Input.mousePosition;
-
-        Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.GetChild(0).position);
-
-        Vector2 lookDir = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
-        _angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90;
-
-        directionShoot.transform.rotation = Quaternion.Euler(0, 0, _angle);
+        Vector2 lookDir = new Vector2(Input.GetAxis("P2HorizontalAim"), Input.GetAxis("P2VerticalAim"));
+        if (lookDir.magnitude > 0f)
+        {
+            _angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+                
+            transform.GetChild(0).rotation = Quaternion.Euler(0,0,_angle);
+        }
     }
 }
