@@ -23,8 +23,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.workshop25-01/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.workshop25-01/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.workshop25-01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.workshop25-01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemi/EnemiBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemi/EnemiBehaviour.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/GridUtilities.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/PlayerBullet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EnemySpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Weapons/Weapon.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Enemi/EnemiBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerLife.cs" root0="FORCE_HIGHLIGHTING" />
@@ -53,9 +53,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerShoot.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerLife.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Weapons/PlayerBullet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enemi/EnemiBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemi/EnemiHitRange.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enemi/EnemisDetectPlayer.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnemySpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enemi/EnemiBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -118,6 +119,7 @@
       <workItem from="1611579402871" duration="1005000" />
       <workItem from="1611583566128" duration="3095000" />
       <workItem from="1611609698647" duration="604000" />
+      <workItem from="1611648292489" duration="530000" />
     </task>
     <servers />
   </component>

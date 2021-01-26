@@ -17,6 +17,9 @@ public class EnemiBehaviour : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.FindWithTag("Player");
+        
+        
         playerInRange = false;
         goToPlayer = false;
     }

@@ -210,6 +210,7 @@
             <e p="UnityReferenceHelper.cs" t="Include" />
           </e>
         </e>
+        <e p="EnemySpawner.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Enemi" t="Include">
             <e p="EnemiBehaviour.cs" t="Include" />
