@@ -9,8 +9,12 @@ public class PlayerKidIcariusMovement : MonoBehaviour
 
     public float forceJump;
     public float speed;
-    public float angle;
+    [HideInInspector]
+    public float xMove;
+    public float yMove;
 
+    private float _angle;
+    
     public GameObject directionShoot;
 
     private Rigidbody2D _rb;
@@ -24,7 +28,8 @@ public class PlayerKidIcariusMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xMove = Input.GetAxisRaw("Horizontal");
+        xMove = Input.GetAxisRaw("Horizontal");
+        yMove = Input.GetAxisRaw("Vertical");
         GunRotation();
         if (_canJump && Input.GetKeyDown(KeyCode.Space))
         {
@@ -55,8 +60,8 @@ public class PlayerKidIcariusMovement : MonoBehaviour
         Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.GetChild(0).position);
 
         Vector2 lookDir = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
-        angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90;
+        _angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90;
 
-        directionShoot.transform.rotation = Quaternion.Euler(0, 0, angle);
+        directionShoot.transform.rotation = Quaternion.Euler(0, 0, _angle);
     }
 }
