@@ -7,10 +7,19 @@ public class PlayerBullet : MonoBehaviour
     public int degats;
     public float speed;
 
+    private Rigidbody2D _rb;
+
+    void Start()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        //_rb.AddForce(transform.up * speed, ForceMode2D.Impulse);
+    }
+
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.up * speed * Time.deltaTime);
+        
     }
 
     void OnTriggerEnter2D(Collider2D other)

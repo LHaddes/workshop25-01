@@ -13,7 +13,7 @@ public class ObjectPooler : MonoBehaviour
         public int size;
     }
 
-    #region Singleton
+        #region Singleton
 
     public static ObjectPooler objectPooler;
 
@@ -55,8 +55,8 @@ public class ObjectPooler : MonoBehaviour
 
         GameObject objectToSpawn = poolDictionnary[tag].Dequeue();
         objectToSpawn.SetActive(true);
-        objectToSpawn.transform.position = position;
-        objectToSpawn.transform.rotation = rotation;
+        objectToSpawn.transform.localPosition = position;
+        objectToSpawn.transform.localRotation = rotation;
         poolDictionnary[tag].Enqueue(objectToSpawn);
         
         if (objectToSpawn.GetComponent<IPooledObject>() != null)

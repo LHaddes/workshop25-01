@@ -47,4 +47,4 @@ MonoBehaviour:
   - tag: PlayerBullet
     prefab: {fileID: 9097046077280020577, guid: 57e6632ee7b03074eb7cab41376100b3,
       type: 3}
-    size: 20
+    size: 50

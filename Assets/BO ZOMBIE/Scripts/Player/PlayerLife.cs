@@ -30,6 +30,7 @@ public class PlayerLife : MonoBehaviour
     public void Death()
     {
         //TODO GAME OVER
+        Destroy(gameObject);
     }
 
     // Update is called once per frame

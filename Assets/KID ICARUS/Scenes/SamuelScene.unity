@@ -190,25 +190,70 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3702065685916479816, guid: 643d2f66c30efdd4189e2f03f859bea2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 54.1
+      objectReference: {fileID: 0}
     - target: {fileID: 3702065685916479817, guid: 643d2f66c30efdd4189e2f03f859bea2,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702065685916479818, guid: 643d2f66c30efdd4189e2f03f859bea2,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702065685916479819, guid: 643d2f66c30efdd4189e2f03f859bea2,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3702065686007258696, guid: 643d2f66c30efdd4189e2f03f859bea2,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3702065686007258698, guid: 643d2f66c30efdd4189e2f03f859bea2,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3702065686007258699, guid: 643d2f66c30efdd4189e2f03f859bea2,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.66
       objectReference: {fileID: 0}
+    - target: {fileID: 3702065686007258699, guid: 643d2f66c30efdd4189e2f03f859bea2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 53.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702065686007258709, guid: 643d2f66c30efdd4189e2f03f859bea2,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3702065687140560794, guid: 643d2f66c30efdd4189e2f03f859bea2,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702065687140560804, guid: 643d2f66c30efdd4189e2f03f859bea2,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702065687140560805, guid: 643d2f66c30efdd4189e2f03f859bea2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 57.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 3702065687140560807, guid: 643d2f66c30efdd4189e2f03f859bea2,
+        type: 3}
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3702065687300918051, guid: 643d2f66c30efdd4189e2f03f859bea2,
         type: 3}
@@ -1200,7 +1245,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1150464966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.22, y: -0.33, z: -2.362396}
+  m_LocalPosition: {x: 7.22, y: -0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 201129797}
@@ -1220,7 +1265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e848d0f89cd57043bb6eff5c8a241e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLifePoints: 10
+  maxLifePoints: 5
   currentLifePoints: 0
   isInvulnerable: 0
   invincibilityBlink: 0.5
@@ -1780,12 +1825,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1457708685}
-  - component: {fileID: 1457708684}
   - component: {fileID: 1457708683}
   - component: {fileID: 1457708682}
   - component: {fileID: 1457708686}
   - component: {fileID: 1457708687}
   - component: {fileID: 1457708688}
+  - component: {fileID: 1457708684}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1833,8 +1878,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &1457708684
-CircleCollider2D:
+--- !u!61 &1457708684
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1846,9 +1891,19 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.029589653}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Size: {x: 0.31943655, y: 0.9408207}
+  m_EdgeRadius: 0
 --- !u!4 &1457708685
 Transform:
   m_ObjectHideFlags: 0
@@ -1857,7 +1912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457708681}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.41, y: -0.31, z: -2.362396}
+  m_LocalPosition: {x: -7.41, y: -0.31, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 843463278}
@@ -1907,7 +1962,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e848d0f89cd57043bb6eff5c8a241e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLifePoints: 10
+  maxLifePoints: 5
   currentLifePoints: 0
   isInvulnerable: 0
   invincibilityBlink: 0.5
@@ -2034,7 +2089,7 @@ GameObject:
   - component: {fileID: 1709101569}
   m_Layer: 0
   m_Name: Grid
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2059,7 +2114,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1709101568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1839794848}

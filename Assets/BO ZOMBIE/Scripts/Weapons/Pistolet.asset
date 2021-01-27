@@ -16,3 +16,4 @@ MonoBehaviour:
   magazineAmmo: 6
   maxAmmo: 32
   fireRate: 0.7
+  damage: 1
