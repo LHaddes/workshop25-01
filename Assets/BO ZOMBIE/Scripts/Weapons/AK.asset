@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: AK
   m_EditorClassIdentifier: 
   isAuto: 1
+  actualAmmo: 30
   magazineAmmo: 30
-  maxAmmo: 90
+  totalAmmo: 90
+  reloadTime: 0.6
   fireRate: 0.15
   damage: 1

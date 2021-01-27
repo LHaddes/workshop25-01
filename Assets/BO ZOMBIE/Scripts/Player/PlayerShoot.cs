@@ -9,7 +9,7 @@ public class PlayerShoot : MonoBehaviour
     public Weapon actualWeapon;
     public List<Weapon> inventory = new List<Weapon>(2);
     public int actualWeaponID;
-    public bool canSwitchWeapon;
+    public bool canSwitchWeapon = true;
 
 
     [Space] [Header("Shooting")] 
@@ -42,17 +42,7 @@ public class PlayerShoot : MonoBehaviour
         }
 
 
-        for (int i = 0; i < inventory.Count; i++)
-        {
-            if (inventory[i] == null)
-            {
-                canSwitchWeapon = false;
-            }
-            else
-            {
-                canSwitchWeapon = true;
-            }
-        }
+        
 
         if (Input.mouseScrollDelta.y != 0 && canSwitchWeapon)
         {
@@ -64,12 +54,12 @@ public class PlayerShoot : MonoBehaviour
 
         if (Input.GetButtonDown("Reload"))
         {
-            if (actualWeapon.actualAmmo == actualWeapon.magazineAmmo)
+            if (actualWeapon.actualAmmo == actualWeapon.magazineAmmo || actualWeapon.totalAmmo <= 0)
             {
                 return;
             }
             
-            if (actualWeapon.actualAmmo <= actualWeapon.magazineAmmo)
+            if (actualWeapon.actualAmmo <= actualWeapon.magazineAmmo && actualWeapon.totalAmmo > 0)
             {
                 _isReloading = true;
             }
@@ -77,16 +67,24 @@ public class PlayerShoot : MonoBehaviour
 
         if (_isReloading)
         {
-            Debug.Log("Reloading...");
             _reloadTime += Time.deltaTime;
             canSwitchWeapon = false;
             canShoot = false;
                 
             if (_reloadTime >= actualWeapon.reloadTime)
             {
-                Debug.Log("Reloaded");
-                actualWeapon.totalAmmo -= (actualWeapon.magazineAmmo - actualWeapon.actualAmmo);
-                actualWeapon.actualAmmo = actualWeapon.magazineAmmo;
+                if (actualWeapon.totalAmmo >= (actualWeapon.magazineAmmo - actualWeapon.actualAmmo))
+                {
+                    actualWeapon.totalAmmo -= (actualWeapon.magazineAmmo - actualWeapon.actualAmmo);
+                    actualWeapon.actualAmmo = actualWeapon.magazineAmmo;
+                }
+                else
+                {
+                    actualWeapon.actualAmmo += actualWeapon.totalAmmo;
+                    actualWeapon.totalAmmo = 0;
+                }
+                
+                
                 canShoot = true;
                 canSwitchWeapon = true;
 
@@ -153,6 +151,10 @@ public class PlayerShoot : MonoBehaviour
             GameObject obj = objectPooler.SpawnFromPool("PlayerBullet", firePoint.position, firePoint.rotation);
 
             actualWeapon.actualAmmo--;
+        }
+        else if (Time.time >= fireRate && actualWeapon.actualAmmo <= 0 && actualWeapon.totalAmmo > 0)
+        {
+            _isReloading = true;
         }
     }
 }
