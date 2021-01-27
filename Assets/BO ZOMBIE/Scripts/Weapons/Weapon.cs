@@ -14,8 +14,19 @@ public class Weapon : ScriptableObject
     public float fireRate;
     public int damage;
 
-    public Weapon()
+
+    private int saveActualAmmo;
+    private int saveTotalAmmo;
+
+    void OnEnable()
     {
-        actualAmmo = magazineAmmo;
+        saveActualAmmo = actualAmmo;
+        saveTotalAmmo = totalAmmo;
+    }
+
+    void OnDisable()
+    {
+        actualAmmo = saveActualAmmo;
+        totalAmmo = saveTotalAmmo;
     }
 }
