@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     [Space] [Header("Rotation")] private Camera cam;
     public float angle;
 
+    public int score;
+
 
     // Start is called before the first frame update
     void Start()
@@ -54,6 +56,34 @@ public class PlayerMovement : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0, 0, angle);
     }
+    
+    
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Mystery Box"))
+        {
+            Debug.Log("boite");
+            //TODO Afficher UI Mystery Box
+            other.gameObject.GetComponent<MysteryBox>().uiText.SetActive(true);
+
+            if (Input.GetButtonDown("Interact") /*&& score > other.gameObject.GetComponent<MysteryBox>().cost*/)
+            {
+                Debug.Log("Interaction");
+                GetComponent<PlayerShoot>().ReplaceWeapon(other.gameObject.GetComponent<MysteryBox>().MysteryWeapon());
+            }
+        }
+    }
+    
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Mystery Box"))
+        {
+            Debug.Log("sortie boite");
+            other.GetComponent<MysteryBox>().uiText.SetActive(false);
+        }
+    }
+
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -62,13 +92,23 @@ public class PlayerMovement : MonoBehaviour
             speed = 0;
             if (other.GetComponent<Barricades>().life < 5)
             {
-                other.GetComponent<Barricades>().life+= Time.deltaTime*1.7f;
+                other.GetComponent<Barricades>().life += Time.deltaTime*1.7f;
+                score += 5;
             }
         }
 
-        if (other.CompareTag("Barricade") && (Input.GetKeyUp(KeyCode.E)|| other.GetComponent<Barricades>().life == 5))
+        if (other.CompareTag("Barricade") && (Input.GetKeyUp(KeyCode.E)|| other.GetComponent<Barricades>().life >= 5))
         {
             speed = 5;
+        }
+        
+        if (other.gameObject.CompareTag("Mystery Box") && Input.GetButtonDown("Interact") /*&& score > other.gameObject.GetComponent<MysteryBox>().cost*/)
+        {
+            
+            
+                Debug.Log("Interaction");
+                GetComponent<PlayerShoot>().ReplaceWeapon(other.gameObject.GetComponent<MysteryBox>().MysteryWeapon());
+            
         }
     }
 }

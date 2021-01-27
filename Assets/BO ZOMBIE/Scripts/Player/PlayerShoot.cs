@@ -42,21 +42,42 @@ public class PlayerShoot : MonoBehaviour
         }
 
 
-        
 
-        if (Input.mouseScrollDelta.y != 0 && canSwitchWeapon)
+        #region Scroll pour le changement d'armes
+
+        if (Input.mouseScrollDelta.y != 0)    //Si on tourne la molette de la souris
         {
-            SwitchWeapon((int)Input.mouseScrollDelta.y);
+            for (int i = 0; i < inventory.Count; i++)
+            {
+                if (inventory[i] == null)
+                {
+                    canSwitchWeapon = false;
+                }
+                else
+                {
+                    canSwitchWeapon = true;
+                }
+            }
+            
+            //On vérifie qu'il y a plusieurs armes dans l'inventaire. Si oui, on lance le switch d'arme, sinon on ne le lance pas
+            if (canSwitchWeapon)
+            {
+                SwitchWeapon((int)Input.mouseScrollDelta.y);
+            }
+            
         }
-        
 
-        ammoText.text = $"{actualWeapon.actualAmmo} / {actualWeapon.totalAmmo}";
+        #endregion
+
+
+
+        #region Rechargement
 
         if (Input.GetButtonDown("Reload"))
         {
             if (actualWeapon.actualAmmo == actualWeapon.magazineAmmo || actualWeapon.totalAmmo <= 0)
             {
-                return;
+                return;    //Si on a déjà le max de munition dans notre chargeur ou qu'on n'a plus de munitions pour recharger, on ne fait rien
             }
             
             if (actualWeapon.actualAmmo <= actualWeapon.magazineAmmo && actualWeapon.totalAmmo > 0)
@@ -69,15 +90,17 @@ public class PlayerShoot : MonoBehaviour
         {
             _reloadTime += Time.deltaTime;
             canSwitchWeapon = false;
-            canShoot = false;
+            canShoot = false;    //On empêche le tir pendant le rechargement
                 
             if (_reloadTime >= actualWeapon.reloadTime)
             {
+                //On calcule s'il y a assez de munitions pour recharger l'arme entièrement. Si oui, on dit que les munitions actuelles valent les munitions maximum d'un chargeur
                 if (actualWeapon.totalAmmo >= (actualWeapon.magazineAmmo - actualWeapon.actualAmmo))
                 {
                     actualWeapon.totalAmmo -= (actualWeapon.magazineAmmo - actualWeapon.actualAmmo);
                     actualWeapon.actualAmmo = actualWeapon.magazineAmmo;
                 }
+                //Sinon, on calcule combien de munitions on ajoute et on passe le nombre de munitions restant à 0
                 else
                 {
                     actualWeapon.actualAmmo += actualWeapon.totalAmmo;
@@ -88,12 +111,18 @@ public class PlayerShoot : MonoBehaviour
                 canShoot = true;
                 canSwitchWeapon = true;
 
-                ammoText.text = $"{actualWeapon.actualAmmo} / {actualWeapon.totalAmmo}";
+                ammoText.text = $"{actualWeapon.actualAmmo} / {actualWeapon.totalAmmo}";    //On met à jour l'ui
 
                 _reloadTime = 0;
                 _isReloading = false;
             }
         }
+
+        #endregion
+        
+        ammoText.text = $"{actualWeapon.actualAmmo} / {actualWeapon.totalAmmo}";
+
+        
     }
 
     public void SwitchWeapon(int mouseScroll)
@@ -156,5 +185,12 @@ public class PlayerShoot : MonoBehaviour
         {
             _isReloading = true;
         }
+    }
+
+
+    public void ReplaceWeapon(Weapon newWeapon)
+    {
+        inventory[actualWeaponID] = newWeapon;
+        actualWeapon = newWeapon;
     }
 }

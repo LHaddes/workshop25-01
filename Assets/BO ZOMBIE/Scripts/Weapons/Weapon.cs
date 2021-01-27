@@ -29,4 +29,10 @@ public class Weapon : ScriptableObject
         actualAmmo = saveActualAmmo;
         totalAmmo = saveTotalAmmo;
     }
+
+    public void Reset()
+    {
+        actualAmmo = saveActualAmmo;
+        totalAmmo = saveTotalAmmo;
+    }
 }

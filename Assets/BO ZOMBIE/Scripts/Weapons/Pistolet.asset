@@ -18,4 +18,4 @@ MonoBehaviour:
   totalAmmo: 24
   reloadTime: 0.6
   fireRate: 0.7
-  damage: 1
+  damage: 2
