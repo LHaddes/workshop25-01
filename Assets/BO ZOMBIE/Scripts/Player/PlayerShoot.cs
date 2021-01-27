@@ -20,6 +20,7 @@ public class PlayerShoot : MonoBehaviour
     public ObjectPooler objectPooler;
     public TMP_Text ammoText;
     private float _reloadTime;
+    private bool _isReloading;
 
     void Start()
     {
@@ -70,15 +71,29 @@ public class PlayerShoot : MonoBehaviour
             
             if (actualWeapon.actualAmmo <= actualWeapon.magazineAmmo)
             {
-                _reloadTime += Time.deltaTime;
-                canSwitchWeapon = false;
-                canShoot = false;
+                _isReloading = true;
+            }
+        }
+
+        if (_isReloading)
+        {
+            Debug.Log("Reloading...");
+            _reloadTime += Time.deltaTime;
+            canSwitchWeapon = false;
+            canShoot = false;
                 
-                if (_reloadTime >= actualWeapon.reloadTime)
-                {
-                    actualWeapon.totalAmmo -= (actualWeapon.magazineAmmo - actualWeapon.actualAmmo);
-                    actualWeapon.actualAmmo = actualWeapon.magazineAmmo;
-                }
+            if (_reloadTime >= actualWeapon.reloadTime)
+            {
+                Debug.Log("Reloaded");
+                actualWeapon.totalAmmo -= (actualWeapon.magazineAmmo - actualWeapon.actualAmmo);
+                actualWeapon.actualAmmo = actualWeapon.magazineAmmo;
+                canShoot = true;
+                canSwitchWeapon = true;
+
+                ammoText.text = $"{actualWeapon.actualAmmo} / {actualWeapon.totalAmmo}";
+
+                _reloadTime = 0;
+                _isReloading = false;
             }
         }
     }

@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Pistolet
   m_EditorClassIdentifier: 
   isAuto: 0
+  actualAmmo: 6
   magazineAmmo: 6
-  maxAmmo: 32
+  totalAmmo: 24
+  reloadTime: 0.6
   fireRate: 0.7
   damage: 1

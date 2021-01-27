@@ -899,6 +899,11 @@ PrefabInstance:
       propertyPath: m_FlipY
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4527412337363347382, guid: b469bfdc32880ec41849de530bed9753,
+        type: 3}
+      propertyPath: ammoText
+      value: 
+      objectReference: {fileID: 1184119068}
     - target: {fileID: 5994617683847952800, guid: b469bfdc32880ec41849de530bed9753,
         type: 3}
       propertyPath: m_LocalRotation.x
