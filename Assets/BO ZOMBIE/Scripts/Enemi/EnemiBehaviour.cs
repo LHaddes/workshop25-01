@@ -21,11 +21,12 @@ public class EnemiBehaviour : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindWithTag("Player");
-        
-        
+
+
         playerInRange = false;
         goToPlayer = false;
     }
+
     // Update is called once per frame
     void Update()
     {
@@ -43,7 +44,7 @@ public class EnemiBehaviour : MonoBehaviour
         if (goToPlayer)
         {
             Vector3 dir = player.transform.position - transform.position;
-            float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
             transform.Translate(Vector3.right * Time.deltaTime * speed);
         }
@@ -53,7 +54,7 @@ public class EnemiBehaviour : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-    
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Barricade"))
@@ -65,12 +66,7 @@ public class EnemiBehaviour : MonoBehaviour
             else
             {
                 speed = 0;
-                hitRate -= Time.deltaTime;
-                if (hitRate <= 0)
-                {
-                    other.GetComponent<Barricades>().life--;
-                    hitRate = 1f;
-                }
+                other.GetComponent<Barricades>().life -= Time.deltaTime;
             }
         }
     }

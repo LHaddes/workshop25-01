@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
@@ -9,14 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")] public Vector2 moveDir;
     public float speed;
     private Rigidbody2D _rb;
-    
 
-    [Space]
-    [Header("Rotation")]
-    private Camera cam;
+
+    [Space] [Header("Rotation")] private Camera cam;
     public float angle;
-    
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,13 +45,30 @@ public class PlayerMovement : MonoBehaviour
 
     public void PlayerRotation()
     {
-    Vector3 mouse = Input.mousePosition;
+        Vector3 mouse = Input.mousePosition;
 
         Vector3 screenPoint = Camera.main.WorldToScreenPoint(transform.GetChild(0).position);
-            
+
         Vector2 lookDir = new Vector2(mouse.x - screenPoint.x, mouse.y - screenPoint.y);
         angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90;
-        
-        transform.rotation = Quaternion.Euler(0,0,angle);
+
+        transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Barricade") && Input.GetKey(KeyCode.E))
+        {
+            speed = 0;
+            if (other.GetComponent<Barricades>().life < 5)
+            {
+                other.GetComponent<Barricades>().life+= Time.deltaTime*1.7f;
+            }
+        }
+
+        if (other.CompareTag("Barricade") && (Input.GetKeyUp(KeyCode.E)|| other.GetComponent<Barricades>().life == 5))
+        {
+            speed = 5;
+        }
     }
 }
