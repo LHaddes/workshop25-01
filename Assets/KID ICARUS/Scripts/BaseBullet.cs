@@ -7,10 +7,18 @@ public class BaseBullet : MonoBehaviour
     public int degats;
     public float speed;
 
+    public float timer;
+
     // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.up * speed * Time.deltaTime);
+
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)

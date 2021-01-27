@@ -62,7 +62,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   degats: 1
-  speed: 6
+  speed: 15
+  timer: 4
 --- !u!1 &642785321432846274
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class EnemiBehaviour : MonoBehaviour
 {
     public bool playerInRange = false;
     public bool goToPlayer = false;
+    public bool isStuckByBarricade = false;
 
     public float hitRate = 1f;
+    public float speed = 2;
 
     public GameObject player;
 
@@ -42,12 +45,33 @@ public class EnemiBehaviour : MonoBehaviour
             Vector3 dir = player.transform.position - transform.position;
             float angle = Mathf.Atan2(dir.y,dir.x) * Mathf.Rad2Deg;
             transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-            transform.Translate(Vector3.right * Time.deltaTime * 2);
+            transform.Translate(Vector3.right * Time.deltaTime * speed);
         }
 
         if (life <= 0)
         {
             gameObject.SetActive(false);
+        }
+    }
+    
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Barricade"))
+        {
+            if (other.GetComponent<Barricades>().life == 0)
+            {
+                speed = 2;
+            }
+            else
+            {
+                speed = 0;
+                hitRate -= Time.deltaTime;
+                if (hitRate <= 0)
+                {
+                    other.GetComponent<Barricades>().life--;
+                    hitRate = 1f;
+                }
+            }
         }
     }
 }

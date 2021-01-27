@@ -5,10 +5,17 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Weapon")]
 public class Weapon : ScriptableObject
 {
-    public bool isAuto;
-    public float magazineAmmo;
-    public float maxAmmo;
+    public bool isAuto;    //Si l'arme tire en automatique ou non
+    public int actualAmmo;    //Le nombre actuel de munition de notre chargeur
+    public int magazineAmmo;    //Len ombre de munitions max d'un chargeur
+    public int totalAmmo;    //Le nombre de munitions total qu'on transporte
+    public float reloadTime;
 
     public float fireRate;
     public int damage;
+
+    public Weapon()
+    {
+        actualAmmo = magazineAmmo;
+    }
 }
