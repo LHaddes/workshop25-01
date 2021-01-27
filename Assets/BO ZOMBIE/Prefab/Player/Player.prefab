@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1433464210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5994617683847952800}
   m_RootOrder: 1
@@ -97,9 +97,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingLayerID: 2008582393
+  m_SortingLayer: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: be202a7a4055d134186576bc02a9c131, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -200,9 +200,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 05bd49fcd02f74d45b5a509328b17a3f, type: 2}
   - {fileID: 11400000, guid: 4bf0d3e2c181dfa43903fd5297cba079, type: 2}
   actualWeaponID: 0
+  canSwitchWeapon: 0
+  canShoot: 1
   fireRate: 0
   firePoint: {fileID: 1185935646}
   objectPooler: {fileID: 0}
+  ammoText: {fileID: 0}
 --- !u!58 &1858908467136657866
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -245,7 +248,7 @@ Transform:
   m_GameObject: {fileID: 1379976689663099591}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5994617683847952800}
   m_RootOrder: 0
@@ -286,9 +289,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingLayerID: 2008582393
+  m_SortingLayer: 4
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bd7423f831dc880479c6f37505b15eae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
