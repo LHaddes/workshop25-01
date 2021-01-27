@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Barricades : MonoBehaviour
 {
-    public int life = 5;
+    public float life = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +25,4 @@ public class Barricades : MonoBehaviour
             //GetComponent<BoxCollider2D>().isTrigger = true;
         }
     }
-    
 }
