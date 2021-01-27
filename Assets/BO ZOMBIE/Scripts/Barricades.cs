@@ -7,6 +7,8 @@ public class Barricades : MonoBehaviour
 {
     public float life = 5;
 
+    public Sprite[] sprites;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +22,21 @@ public class Barricades : MonoBehaviour
             life = 0;
         }
 
-        if (life == 0)
+        if (life >= 5)
         {
-            //GetComponent<BoxCollider2D>().isTrigger = true;
+            GetComponent<SpriteRenderer>().sprite = sprites[0];
+        }
+        else if (life <= 5 && life >= 2.5f)
+        {
+            GetComponent<SpriteRenderer>().sprite = sprites[1];
+        }
+        else if (life <= 2.5f && life >= 0)
+        {
+            GetComponent<SpriteRenderer>().sprite = sprites[2];
+        }
+        else if (life <= 0)
+        {
+            GetComponent<SpriteRenderer>().sprite = sprites[3];
         }
     }
 }
