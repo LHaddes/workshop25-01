@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
     [Space] [Header("Rotation")] private Camera cam;
     public float angle;
 
-    public int score;
-
+    public float score;
+    public TextMeshProUGUI txtScore;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         
         moveDir = new Vector2(horizontal, vertical);
+
+        txtScore.text = "score : " + score.ToString("F0");
     }
 
     void FixedUpdate()
@@ -87,17 +90,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Barricade") && Input.GetKey(KeyCode.E))
+        if (other.CompareTag("Barricade") && Input.GetButton("Interact"))
         {
             speed = 0;
             if (other.GetComponent<Barricades>().life < 5)
             {
                 other.GetComponent<Barricades>().life += Time.deltaTime*1.7f;
-                score += 5;
+                score += Time.deltaTime*2;
             }
         }
 
-        if (other.CompareTag("Barricade") && (Input.GetKeyUp(KeyCode.E)|| other.GetComponent<Barricades>().life >= 5))
+        if (other.CompareTag("Barricade") && (Input.GetButtonUp("Interact")|| other.GetComponent<Barricades>().life >= 5))
         {
             speed = 5;
         }
