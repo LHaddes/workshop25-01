@@ -54,3 +54,6 @@ TagManager:
   - name: Wall
     uniqueID: 1926231431
     locked: 0
+  - name: Instances
+    uniqueID: 2008582393
+    locked: 0
