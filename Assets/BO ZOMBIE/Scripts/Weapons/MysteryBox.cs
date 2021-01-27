@@ -13,6 +13,7 @@ public class MysteryBox : MonoBehaviour
 
     public Weapon MysteryWeapon()
     {
+        Debug.Log("enter function");
         for (int i = 0; i < weaponList.Count; i++)
         {
             weaponList[i].Reset();
@@ -20,12 +21,10 @@ public class MysteryBox : MonoBehaviour
         
         int randomInt = Random.Range(0, weaponList.Count);
 
-        if (FindObjectOfType<PlayerShoot>().inventory.Contains(weaponList[randomInt]))
+        while (FindObjectOfType<PlayerShoot>().inventory.Contains(weaponList[randomInt]))
         {
-            MysteryWeapon();
+            randomInt = Random.Range(0, weaponList.Count);
         }
-        
-
         return weaponList[randomInt];
     }
 }

@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     public float score;
     public TextMeshProUGUI txtScore;
 
+    private bool _isNearBox;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +38,17 @@ public class PlayerMovement : MonoBehaviour
         moveDir = new Vector2(horizontal, vertical);
 
         txtScore.text = "score : " + score.ToString("F0");
+
+        if (_isNearBox)
+        {
+            if (Input.GetButtonDown("Interact") /*&& score > other.gameObject.GetComponent<MysteryBox>().cost*/)
+            {
+                Debug.Log("Interaction");
+                Weapon weapon = FindObjectOfType<MysteryBox>().MysteryWeapon();
+            
+                GetComponent<PlayerShoot>().ReplaceWeapon(weapon);
+            }
+        }
     }
 
     void FixedUpdate()
@@ -65,8 +79,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Mystery Box"))
         {
-            Debug.Log("boite");
-            //TODO Afficher UI Mystery Box
+            _isNearBox = true;
+            
             other.gameObject.GetComponent<MysteryBox>().uiText.SetActive(true);
 
             if (Input.GetButtonDown("Interact") /*&& score > other.gameObject.GetComponent<MysteryBox>().cost*/)
@@ -82,7 +96,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Mystery Box"))
         {
-            Debug.Log("sortie boite");
+            _isNearBox = false;
+            
             other.GetComponent<MysteryBox>().uiText.SetActive(false);
         }
     }
@@ -105,13 +120,6 @@ public class PlayerMovement : MonoBehaviour
             speed = 5;
         }
         
-        if (other.gameObject.CompareTag("Mystery Box") && Input.GetButtonDown("Interact") /*&& score > other.gameObject.GetComponent<MysteryBox>().cost*/)
-        {
-            
-            
-                Debug.Log("Interaction");
-                GetComponent<PlayerShoot>().ReplaceWeapon(other.gameObject.GetComponent<MysteryBox>().MysteryWeapon());
-            
-        }
+        
     }
 }
