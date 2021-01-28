@@ -35,6 +35,7 @@ public class EnemiBehaviour : MonoBehaviour
             hitRate -= Time.deltaTime;
             if (hitRate <= 0)
             {
+                //TODO appliquer les dégâts au player
                 //player.GetComponent<PlayerLife>().Hurt(1);
                 Debug.Log("je touche le joueur");
                 hitRate = 1f;
@@ -69,6 +70,22 @@ public class EnemiBehaviour : MonoBehaviour
                 speed = 0;
                 other.GetComponent<Barricades>().life -= Time.deltaTime;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
         }
     }
 }
