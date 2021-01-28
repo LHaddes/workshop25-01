@@ -12,6 +12,14 @@ public class MysteryBox : MonoBehaviour
     public List<Transform> spawnPoints = new List<Transform>();
     private int _counter;
 
+    void Start()
+    {
+        int random = Random.Range(0, spawnPoints.Count);
+        
+        transform.position = spawnPoints[random].position;
+        transform.rotation = spawnPoints[random].rotation;
+    }
+
     public void Update()
     {
         if (_counter > 3)
@@ -23,6 +31,7 @@ public class MysteryBox : MonoBehaviour
             }
 
             transform.position = spawnPoints[random].position;
+            transform.rotation = spawnPoints[random].rotation;
             _counter = 0;
         }
     }
@@ -30,7 +39,6 @@ public class MysteryBox : MonoBehaviour
 
     public Weapon MysteryWeapon()
     {
-        Debug.Log("enter function");
         for (int i = 0; i < weaponList.Count; i++)
         {
             weaponList[i].Reset();
