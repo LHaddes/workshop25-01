@@ -9,6 +9,23 @@ public class MysteryBox : MonoBehaviour
     public GameObject uiText;
 
     public List<Weapon> weaponList = new List<Weapon>();
+    public List<Transform> spawnPoints = new List<Transform>();
+    private int _counter;
+
+    public void Update()
+    {
+        if (_counter > 3)
+        {
+            int random = Random.Range(0, spawnPoints.Count);
+            while (spawnPoints[random].position == transform.position)
+            {
+                random = Random.Range(0, spawnPoints.Count);
+            }
+
+            transform.position = spawnPoints[random].position;
+            _counter = 0;
+        }
+    }
 
 
     public Weapon MysteryWeapon()
@@ -25,6 +42,8 @@ public class MysteryBox : MonoBehaviour
         {
             randomInt = Random.Range(0, weaponList.Count);
         }
+
+        _counter++;
         return weaponList[randomInt];
     }
 }
