@@ -1,0 +1,662 @@
+fileFormatVersion: 2
+guid: 63412c0a28621394e81e840dd086fc25
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -678968323432622083
+    second: HUD des armes_0
+  - first:
+      213: -4568442239359255363
+    second: HUD des armes_1
+  - first:
+      213: -7393259967197339977
+    second: HUD des armes_2
+  - first:
+      213: -9082674040148992785
+    second: HUD des armes_3
+  - first:
+      213: 7419784889542649937
+    second: HUD des armes_4
+  - first:
+      213: 3060507070638506761
+    second: HUD des armes_5
+  - first:
+      213: -5864394222608022488
+    second: HUD des armes_6
+  - first:
+      213: -740260983932357036
+    second: HUD des armes_7
+  - first:
+      213: -3620907831392510466
+    second: HUD des armes_8
+  - first:
+      213: 1720515900196195896
+    second: HUD des armes_9
+  - first:
+      213: -8008112396775433600
+    second: HUD des armes_10
+  - first:
+      213: 2551814338561037832
+    second: HUD des armes_11
+  - first:
+      213: -1479916239443921484
+    second: HUD des armes_12
+  - first:
+      213: -6924862037581829614
+    second: HUD des armes_13
+  - first:
+      213: -3540669545665723858
+    second: HUD des armes_14
+  - first:
+      213: 4952530883423260360
+    second: HUD des armes_15
+  - first:
+      213: -256864372997421856
+    second: HUD des armes_16
+  - first:
+      213: -7375130132739088713
+    second: HUD des armes_17
+  - first:
+      213: -6415923899245294772
+    second: HUD des armes_18
+  - first:
+      213: 4260431786568744842
+    second: HUD des armes_19
+  - first:
+      213: 8762965847472720770
+    second: HUD des armes_20
+  - first:
+      213: 700137994323930167
+    second: HUD des armes_21
+  - first:
+      213: 6695595131126014325
+    second: HUD des armes_22
+  - first:
+      213: 6496072041366232549
+    second: HUD des armes_23
+  - first:
+      213: 421182711616022443
+    second: HUD des armes_24
+  - first:
+      213: -5517839089359591328
+    second: HUD des armes_25
+  - first:
+      213: -3365535120366358088
+    second: HUD des armes_26
+  - first:
+      213: -4312981803649189337
+    second: HUD des armes_27
+  - first:
+      213: 6131558706870994292
+    second: HUD des armes_28
+  - first:
+      213: -8130116806066888086
+    second: HUD des armes_29
+  - first:
+      213: -6811057271605654953
+    second: HUD des armes_30
+  - first:
+      213: -5965793068185246873
+    second: HUD des armes_31
+  - first:
+      213: -6104675754124947290
+    second: HUD des armes_32
+  - first:
+      213: 811779177798317055
+    second: HUD des armes_33
+  - first:
+      213: 2517926160448907151
+    second: HUD des armes_34
+  - first:
+      213: 5135299985557548753
+    second: HUD des armes_35
+  - first:
+      213: -8688133243223402375
+    second: HUD des armes_36
+  - first:
+      213: -3746506906649918734
+    second: HUD des armes_37
+  - first:
+      213: -1584913660728809994
+    second: HUD des armes_38
+  - first:
+      213: 4719546238861625932
+    second: HUD des armes_39
+  - first:
+      213: -3468544389741239887
+    second: HUD des armes_40
+  - first:
+      213: -5454415596862448481
+    second: HUD des armes_41
+  - first:
+      213: 8507537550759648258
+    second: HUD des armes_42
+  - first:
+      213: 6383779768576799615
+    second: HUD des armes_43
+  - first:
+      213: -2557995311173242881
+    second: HUD des armes_44
+  - first:
+      213: -1054634352987555419
+    second: HUD des armes_45
+  - first:
+      213: -5612232058800877629
+    second: HUD des armes_46
+  - first:
+      213: 6824683848734805884
+    second: HUD des armes_47
+  - first:
+      213: -4999236652440668791
+    second: HUD des armes_48
+  - first:
+      213: -6371626166015724024
+    second: HUD des armes_49
+  - first:
+      213: -8533323729022959176
+    second: HUD des armes_50
+  - first:
+      213: -2192999594867088068
+    second: HUD des armes_51
+  - first:
+      213: -6923870557743308169
+    second: HUD des armes_52
+  - first:
+      213: -8881774769265077577
+    second: HUD des armes_53
+  - first:
+      213: 4115960667710938286
+    second: HUD des armes_54
+  - first:
+      213: 1504038029875986142
+    second: HUD des armes_55
+  - first:
+      213: -1409949733642654808
+    second: HUD des armes_56
+  - first:
+      213: -9000442299880886316
+    second: HUD des armes_57
+  - first:
+      213: 2416006943536056287
+    second: HUD des armes_58
+  - first:
+      213: -559957952040242665
+    second: HUD des armes_59
+  - first:
+      213: -3627247422766876849
+    second: HUD des armes_60
+  - first:
+      213: -1885339658707034039
+    second: HUD des armes_61
+  - first:
+      213: -1659089499007624245
+    second: HUD des armes_62
+  - first:
+      213: 853604517560392953
+    second: HUD des armes_63
+  - first:
+      213: 4319979014894951931
+    second: HUD des armes_64
+  - first:
+      213: 2703941535867114680
+    second: HUD des armes_65
+  - first:
+      213: 7885219398896772643
+    second: HUD des armes_66
+  - first:
+      213: -6731549222427496058
+    second: HUD des armes_67
+  - first:
+      213: -8582568188015017766
+    second: HUD des armes_68
+  - first:
+      213: -4653688123172964628
+    second: HUD des armes_69
+  - first:
+      213: 559301380514700257
+    second: HUD des armes_70
+  - first:
+      213: 2625160133383631858
+    second: HUD des armes_71
+  - first:
+      213: -4382466814329513317
+    second: HUD des armes_72
+  - first:
+      213: -210676219392451413
+    second: HUD des armes_73
+  - first:
+      213: 4030867906970205662
+    second: HUD des armes_74
+  - first:
+      213: 7579454477130689798
+    second: HUD des armes_75
+  - first:
+      213: -3450951645231667122
+    second: HUD des armes_76
+  - first:
+      213: 5011663675564677075
+    second: HUD des armes_77
+  - first:
+      213: -2185034222758581245
+    second: HUD des armes_78
+  - first:
+      213: -1382014675670879036
+    second: HUD des armes_79
+  - first:
+      213: -8797775179770286816
+    second: HUD des armes_80
+  - first:
+      213: 1800465008445733046
+    second: HUD des armes_81
+  - first:
+      213: -1939867692128391328
+    second: HUD des armes_82
+  - first:
+      213: 3404927705977432325
+    second: HUD des armes_83
+  - first:
+      213: 2444280663478030326
+    second: HUD des armes_84
+  - first:
+      213: -4808905605499788550
+    second: HUD des armes_85
+  - first:
+      213: 8371504264098501653
+    second: HUD des armes_86
+  - first:
+      213: 5099361440339742064
+    second: HUD des armes_87
+  - first:
+      213: 4630841482516255876
+    second: HUD des armes_88
+  - first:
+      213: 2758464859927270022
+    second: HUD des armes_89
+  - first:
+      213: 5807257113926999320
+    second: HUD des armes_90
+  - first:
+      213: -7223775423243842248
+    second: HUD des armes_91
+  - first:
+      213: -7214045271980223594
+    second: HUD des armes_92
+  - first:
+      213: -6366423016657900986
+    second: HUD des armes_93
+  - first:
+      213: -4969069064042914101
+    second: HUD des armes_94
+  - first:
+      213: -6204074085522046477
+    second: HUD des armes_95
+  - first:
+      213: 6024698086405656237
+    second: HUD des armes_96
+  - first:
+      213: -7302847320540974768
+    second: HUD des armes_97
+  - first:
+      213: 7062050747175258335
+    second: HUD des armes_98
+  - first:
+      213: -8602557545939777342
+    second: HUD des armes_99
+  - first:
+      213: -4909337471486457845
+    second: HUD des armes_100
+  - first:
+      213: 8586997454853785078
+    second: HUD des armes_101
+  - first:
+      213: -1445178905566944893
+    second: HUD des armes_102
+  - first:
+      213: 2979144925596110065
+    second: HUD des armes_103
+  - first:
+      213: -6993709441751310055
+    second: HUD des armes_104
+  - first:
+      213: 2112992721321726402
+    second: HUD des armes_105
+  - first:
+      213: -6625331518635049591
+    second: HUD des armes_106
+  - first:
+      213: -4388214025351510663
+    second: HUD des armes_107
+  - first:
+      213: -2380119067224379380
+    second: HUD des armes_108
+  - first:
+      213: 9054280809711060788
+    second: HUD des armes_109
+  - first:
+      213: -2648006109196270243
+    second: HUD des armes_110
+  - first:
+      213: -913372337474774156
+    second: HUD des armes_111
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 256
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HUD des armes_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df75e0c38e1d396f0800000000000000
+      internalID: -678968323432622083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD des armes_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcf91aecf1a990c0800000000000000
+      internalID: -4568442239359255363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD des armes_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be16132b3dd56990800000000000000
+      internalID: -7393259967197339977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD des armes_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fecd142251cd3f180800000000000000
+      internalID: -9082674040148992785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD des armes_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158200b9b0f58f660800000000000000
+      internalID: 7419784889542649937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD des armes_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903caf927fa197a20800000000000000
+      internalID: 3060507070638506761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD des armes_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8248892868c7d9ea0800000000000000
+      internalID: -5864394222608022488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD des armes_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45671a3ae801ab5f0800000000000000
+      internalID: -740260983932357036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD des armes_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efd5b610383ffbdc0800000000000000
+      internalID: -3620907831392510466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD des armes_9
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e0b95781080e710800000000000000
+      internalID: 1720515900196195896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
