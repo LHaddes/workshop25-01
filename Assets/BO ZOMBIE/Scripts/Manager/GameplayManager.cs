@@ -9,15 +9,17 @@ public class GameplayManager : MonoBehaviour
     public TextMeshProUGUI nbMoneyText;
     public TextMeshProUGUI timerText;
 
-    public Transform[] posForMagicBoxes;
+    /*public Transform[] posForMagicBoxes;
 
-    public GameObject MagicBox;
+    public GameObject MagicBox;*/
     
     public int nbMoneyPlayer;
     public int nbWave;
 
     public float countdownBetweenTwoWaves;
     public float timer;
+
+    public GameObject player;
     
     #region Singleton
 
@@ -33,7 +35,7 @@ public class GameplayManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -48,15 +50,16 @@ public class GameplayManager : MonoBehaviour
         timerText.text = timer.ToString("F0");
     }
 
-    public void UpdateMoney(int nbMoney)
+    public void UpdateMoney(float nbMoney)
     {
-        nbMoneyPlayer += nbMoney;
-        nbMoneyText.text = nbMoneyPlayer.ToString();
+        player.GetComponent<PlayerMovement>().score += nbMoney;
+        nbMoneyText.text = Mathf.FloorToInt(player.GetComponent<PlayerMovement>().score).ToString();
     }
 
+    /*
     public void SetMagicBox()
     {
         MagicBox.transform.position = posForMagicBoxes[Random.Range(0, posForMagicBoxes.Length)].position;
         MagicBox.SetActive(true);
-    }
+    }*/
 }

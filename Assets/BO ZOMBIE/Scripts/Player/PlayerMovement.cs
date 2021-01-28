@@ -85,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButtonDown("Interact") /*&& score > other.gameObject.GetComponent<MysteryBox>().cost*/)
             {
+                GameplayManager.gameplayManager.UpdateMoney(-other.gameObject.GetComponent<MysteryBox>().cost);
                 Debug.Log("Interaction");
                 GetComponent<PlayerShoot>().ReplaceWeapon(other.gameObject.GetComponent<MysteryBox>().MysteryWeapon());
             }
