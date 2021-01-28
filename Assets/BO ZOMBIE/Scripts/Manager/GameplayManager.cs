@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 
@@ -14,12 +15,20 @@ public class GameplayManager : MonoBehaviour
     public GameObject MagicBox;*/
     
     public int nbMoneyPlayer;
-    public int nbWave;
+    
 
-    public float countdownBetweenTwoWaves;
+    
     public float timer;
 
     public GameObject player;
+    
+    [Header("Wave and Gameplay Management")]
+    public int nbWave;
+    public int palierWave;
+    public float countdownBetweenTwoWaves;
+    public int nbEnemies;
+    public List<Transform> spawnZombies = new List<Transform>();
+    
     
     #region Singleton
 
@@ -36,6 +45,9 @@ public class GameplayManager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+
+        nbWave++;
+        StartWave();
     }
 
     // Update is called once per frame
@@ -62,4 +74,21 @@ public class GameplayManager : MonoBehaviour
         MagicBox.transform.position = posForMagicBoxes[Random.Range(0, posForMagicBoxes.Length)].position;
         MagicBox.SetActive(true);
     }*/
+
+    public void StartWave()
+    {
+        nbEnemies = 5 * palierWave + 2 * nbWave;
+
+        for (int i = 0; i < nbEnemies; i++)
+        {
+            //ObjectPooler.objectPooler.SpawnFromPool("Enemy", )
+        }
+        //TODO Spawn Zombies(5 * palier + 2 * nbWave)
+    }
+}
+
+
+public class Wave
+{
+    public int nbZombies;
 }

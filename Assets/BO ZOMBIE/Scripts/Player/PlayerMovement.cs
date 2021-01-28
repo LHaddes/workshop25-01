@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public float score;
     public TextMeshProUGUI txtScore;
 
-    private bool _isNearBox;
+    public bool _isNearBox;
 
 
     // Start is called before the first frame update
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         
         moveDir = new Vector2(horizontal, vertical);
 
-        txtScore.text = "score : " + score.ToString("F0");
+//        txtScore.text = "score : " + score.ToString("F0");
 
         if (_isNearBox)
         {

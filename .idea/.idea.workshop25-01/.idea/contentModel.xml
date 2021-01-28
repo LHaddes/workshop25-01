@@ -229,6 +229,7 @@
               <e p="PauseManager.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
+              <e p="CameraToPlayer.cs" t="Include" />
               <e p="PlayerLife.cs" t="Include" />
               <e p="PlayerMovement.cs" t="Include" />
               <e p="PlayerShoot.cs" t="Include" />
