@@ -49,12 +49,12 @@ TagManager:
   - name: Ground
     uniqueID: 3357231215
     locked: 0
-  - name: Wall
-    uniqueID: 1926231431
-    locked: 0
   - name: Door
     uniqueID: 2552299273
     locked: 0
   - name: Instances
     uniqueID: 2008582393
+    locked: 0
+  - name: Wall
+    uniqueID: 1926231431
     locked: 0
