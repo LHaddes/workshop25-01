@@ -87,7 +87,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 GameplayManager.gameplayManager.UpdateMoney(-other.gameObject.GetComponent<MysteryBox>().cost);
                 Debug.Log("Interaction");
-                GetComponent<PlayerShoot>().ReplaceWeapon(other.gameObject.GetComponent<MysteryBox>().MysteryWeapon());
+                //GetComponent<PlayerShoot>().ReplaceWeapon(other.gameObject.GetComponent<MysteryBox>().MysteryWeapon());
+                GetComponent<PlayerShoot>().actualWeapon.isBonus = true;
             }
         }
     }

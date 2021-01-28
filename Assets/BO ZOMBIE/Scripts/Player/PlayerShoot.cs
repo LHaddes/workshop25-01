@@ -21,7 +21,8 @@ public class PlayerShoot : MonoBehaviour
     public TMP_Text ammoText;
     private float _reloadTime;
     private bool _isReloading;
-
+    private bool _startCountdownBonus;
+    private float _durationBonus = 10f;
     void Start()
     {
         objectPooler = ObjectPooler.objectPooler;
@@ -41,8 +42,24 @@ public class PlayerShoot : MonoBehaviour
             Shoot();
         }
 
+        if (actualWeapon.isBonus)
+        {
+            actualWeapon.fireRate /= 2;
+            _startCountdownBonus = true;
+        }
 
+        if (_startCountdownBonus)
+        {
+            _durationBonus -= Time.deltaTime;
+        }
 
+        if (_durationBonus <= 0)
+        {
+            actualWeapon.isBonus = false;
+            actualWeapon.fireRate *= 2;
+            _startCountdownBonus = false;
+            _durationBonus = 10f;
+        }
         #region Scroll pour le changement d'armes
 
         if (Input.mouseScrollDelta.y != 0)    //Si on tourne la molette de la souris
