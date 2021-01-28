@@ -4,7 +4,7 @@ public class EnemisDetectPlayer : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == GetComponentInParent<EnemiBehaviour>().player)
+        if (other.gameObject == GetComponentInParent<EnemiAI>().target)
         {
             GetComponentInParent<EnemiBehaviour>().goToPlayer = true;
         }

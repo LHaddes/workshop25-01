@@ -31,7 +31,7 @@ public class PlayerBullet : MonoBehaviour
 
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<EnemiBehaviour>().life--;
+            other.gameObject.GetComponent<EnemiAI>().life--;
             gameObject.SetActive(false);
         }
     }

@@ -8,7 +8,6 @@ public class EnemiBehaviour : MonoBehaviour
 {
     public bool playerInRange = false;
     public bool goToPlayer = false;
-    public bool isStuckByBarricade = false;
 
     public float hitRate = 1f;
     public float speed = 2;
