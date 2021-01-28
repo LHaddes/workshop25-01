@@ -48,3 +48,7 @@ MonoBehaviour:
     prefab: {fileID: 9097046077280020577, guid: 57e6632ee7b03074eb7cab41376100b3,
       type: 3}
     size: 50
+  - tag: Enemy
+    prefab: {fileID: 1483148588566345862, guid: 5e1c6ca948a381540bd2f7594c6175e6,
+      type: 3}
+    size: 80

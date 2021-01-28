@@ -56,6 +56,8 @@ public class EnemiAI : MonoBehaviour
         if (life <= 0)
         {
             target.GetComponent<PlayerMovement>().score += 15;
+            GameplayManager.gameplayManager.actualNbEnemies--;
+            GameplayManager.gameplayManager.UpdateEnemis();
             gameObject.SetActive(false);
         }
     }

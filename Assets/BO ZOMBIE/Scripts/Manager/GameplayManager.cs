@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
 public class GameplayManager : MonoBehaviour
@@ -24,12 +25,12 @@ public class GameplayManager : MonoBehaviour
     
     [Header("Wave and Gameplay Management")]
     public int nbWave;
-    public int palierWave;
     public float countdownBetweenTwoWaves;
-    public int nbEnemies;
+    public int actualNbEnemies, nbEnemies;
     public List<Transform> spawnZombies = new List<Transform>();
-    
-    
+    public List<int> waveList = new List<int>();
+
+
     #region Singleton
 
     public static GameplayManager gameplayManager;
@@ -45,8 +46,6 @@ public class GameplayManager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("Player");
-
-        nbWave++;
         StartWave();
     }
 
@@ -54,12 +53,26 @@ public class GameplayManager : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
+
+        if (actualNbEnemies <= 0)
+        {
+            countdownBetweenTwoWaves -= Time.deltaTime;
+            nbEnemisText.text = "Wave finished !";
+            
+            if (countdownBetweenTwoWaves <= 0)
+            {
+                nbEnemies += Random.Range(4, 8);
+                StartWave();
+                countdownBetweenTwoWaves = 10f;
+            }
+        }
     }
     
-    public void UpdateEnemis(int nbEnemis)
+    public void UpdateEnemis()
     {
-        nbEnemisText.text = nbEnemis.ToString();
-        timerText.text = timer.ToString("F0");
+        nbEnemisText.text = $"Remaining : {actualNbEnemies}\n" +
+                            $"Wave : {nbWave}"
+            ;
     }
 
     public void UpdateMoney(float nbMoney)
@@ -68,27 +81,18 @@ public class GameplayManager : MonoBehaviour
         nbMoneyText.text = Mathf.FloorToInt(player.GetComponent<PlayerMovement>().score).ToString();
     }
 
-    /*
-    public void SetMagicBox()
-    {
-        MagicBox.transform.position = posForMagicBoxes[Random.Range(0, posForMagicBoxes.Length)].position;
-        MagicBox.SetActive(true);
-    }*/
-
     public void StartWave()
     {
-        nbEnemies = 5 * palierWave + 2 * nbWave;
+        Debug.Log("Start Wave");
+        nbWave++;
+        actualNbEnemies = nbEnemies;
 
-        for (int i = 0; i < nbEnemies; i++)
+        for (int i = 0; i < actualNbEnemies; i++)
         {
-            //ObjectPooler.objectPooler.SpawnFromPool("Enemy", )
+            int random = Mathf.FloorToInt(Random.Range(0, spawnZombies.Count));
+            ObjectPooler.objectPooler.SpawnFromPool("Enemy", spawnZombies[random].position, spawnZombies[random].rotation);
         }
-        //TODO Spawn Zombies(5 * palier + 2 * nbWave)
+        
+        UpdateEnemis();
     }
-}
-
-
-public class Wave
-{
-    public int nbZombies;
 }
