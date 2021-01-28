@@ -226,6 +226,7 @@
                 <e p="IPooledObject.cs" t="Include" />
               </e>
               <e p="ObjectPooler.cs" t="Include" />
+              <e p="PauseManager.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
               <e p="PlayerLife.cs" t="Include" />

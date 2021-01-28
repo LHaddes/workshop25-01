@@ -1054,7 +1054,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 608752882}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2041053170}
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &608752882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1522,7 +1533,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 946560728}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2041053170}
+        m_MethodName: Resume
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &946560728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1577,7 +1599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &953988155
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2072,6 +2094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2041053169}
   - component: {fileID: 2041053168}
+  - component: {fileID: 2041053170}
   m_Layer: 0
   m_Name: GameplayManager
   m_TagString: Untagged
@@ -2098,6 +2121,7 @@ MonoBehaviour:
   nbWave: 0
   countdownBetweenTwoWaves: 0
   timer: 0
+  player: {fileID: 0}
 --- !u!4 &2041053169
 Transform:
   m_ObjectHideFlags: 0
@@ -2112,6 +2136,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2041053170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041053167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f59a34136638ad34780ef9817eb33816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  pauseMenu: {fileID: 953988154}
 --- !u!1 &2053309213
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,7 +2231,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2053309216}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2041053170}
+        m_MethodName: Menu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2053309216
 MonoBehaviour:
   m_ObjectHideFlags: 0
