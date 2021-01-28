@@ -51,6 +51,7 @@ public class EnemiBehaviour : MonoBehaviour
 
         if (life <= 0)
         {
+            player.GetComponent<PlayerMovement>().score += 15;
             gameObject.SetActive(false);
         }
     }
