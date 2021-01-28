@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (other.CompareTag("Barricade") && (Input.GetButtonUp("Interact")|| other.GetComponent<Barricades>().life >= 5))
+        if (other.CompareTag("Barricade") && (!Input.GetButton("Interact")|| other.GetComponent<Barricades>().life >= 5))
         {
             speed = 5;
         }
