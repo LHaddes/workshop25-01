@@ -66,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetButtonDown("Interact") && score > FindObjectOfType<MysteryBox>().cost)
             {
+                AudioManager.audioManager.Play("MBOpen");
+                AudioManager.audioManager.Play("MBDie");
                 score -= FindObjectOfType<MysteryBox>().cost;
                 Debug.Log("Interaction");
                 //GetComponent<PlayerShoot>().ReplaceWeapon(other.gameObject.GetComponent<MysteryBox>().MysteryWeapon());

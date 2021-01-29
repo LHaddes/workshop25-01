@@ -786,15 +786,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: MitrailletteReloading
-    clip: {fileID: 8300000, guid: f1be524bdc82308449ef22aaa60b8981, type: 3}
-    volume: 0.2
+  - name: MBOpen
+    clip: {fileID: 8300000, guid: 55e1cf0427b2e06478dc2afb436e38b5, type: 3}
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: MitrailletteReloading
-    clip: {fileID: 8300000, guid: f1be524bdc82308449ef22aaa60b8981, type: 3}
-    volume: 0.2
+  - name: MBDie
+    clip: {fileID: 8300000, guid: c452884644ec43b4a8b93813cade80b9, type: 3}
+    volume: 0.4
     pitch: 1
     loop: 0
     source: {fileID: 0}
