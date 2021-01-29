@@ -621,10 +621,16 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: GunShot
-    clip: {fileID: 8300000, guid: 04347afa822bd814388d216e1e4401e4, type: 3}
-    volume: 0.9
-    pitch: 0
+  - name: GunReloading
+    clip: {fileID: 8300000, guid: f99093de1eef00941b33a54b85042ccc, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MitrailletteReloading
+    clip: {fileID: 8300000, guid: f1be524bdc82308449ef22aaa60b8981, type: 3}
+    volume: 0.2
+    pitch: 1
     loop: 0
     source: {fileID: 0}
 --- !u!4 &232429066
