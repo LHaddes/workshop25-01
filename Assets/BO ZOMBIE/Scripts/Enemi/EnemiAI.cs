@@ -26,6 +26,8 @@ public class EnemiAI : MonoBehaviour
 
     private Rigidbody2D _rb;
 
+    public float score;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,8 +48,10 @@ public class EnemiAI : MonoBehaviour
         Vector3 dir = target.position - transform.position;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        
         if (playerInRange)
         {
+            Debug.Log("in range");
             _hitRate -= Time.deltaTime;
             if (_hitRate <= 0)
             {
@@ -59,7 +63,7 @@ public class EnemiAI : MonoBehaviour
         
         if (life <= 0)
         {
-            target.GetComponent<PlayerMovement>().score += 15;
+            GameplayManager.gameplayManager.UpdateMoney(score);
             GameplayManager.gameplayManager.actualNbEnemies--;
             GameplayManager.gameplayManager.UpdateEnemis();
             gameObject.SetActive(false);
@@ -122,19 +126,5 @@ public class EnemiAI : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerInRange = false;
-        }
-    }
+    
 }

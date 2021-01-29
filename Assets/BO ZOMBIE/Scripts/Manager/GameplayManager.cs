@@ -63,6 +63,8 @@ public class GameplayManager : MonoBehaviour
                 countdownBetweenTwoWaves = 10f;
             }
         }
+
+        nbMoneyText.text = $"Score : {Mathf.FloorToInt(player.GetComponent<PlayerMovement>().score).ToString()}";
     }
     
     public void UpdateEnemis()
@@ -74,7 +76,7 @@ public class GameplayManager : MonoBehaviour
     public void UpdateMoney(float nbMoney)
     {
         player.GetComponent<PlayerMovement>().score += nbMoney;
-        nbMoneyText.text = Mathf.FloorToInt(player.GetComponent<PlayerMovement>().score).ToString();
+        nbMoneyText.text = $"Score : {Mathf.FloorToInt(player.GetComponent<PlayerMovement>().score).ToString()}";
     }
 
     public void StartWave()
