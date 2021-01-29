@@ -24,6 +24,9 @@ public class PlayerShoot : MonoBehaviour
     private bool _startCountdownBonus;
     public float durationBonus = 10f;
     private bool notUsingAmmo;
+    public bool bonus;
+    
+    
     void Start()
     {
         objectPooler = ObjectPooler.objectPooler;
@@ -46,21 +49,20 @@ public class PlayerShoot : MonoBehaviour
         }
         
         
-        if (actualWeapon.isBonus)
+        if (actualWeapon.isBonus && !bonus)
         {
-            durationBonus -= Time.deltaTime;
-
+            bonus = true;
+            _startCountdownBonus = true;
+            
             if (actualWeapon.fireRateBonus)
             {
                 Debug.Log("firerate");
-                fireRate /= 2;
-                actualWeapon.fireRateBonus = false;
+                actualWeapon.fireRate /= 2;
             }
             else if(actualWeapon.infiniteAmmoBonus)
             {
                 Debug.Log("infinite");
                 notUsingAmmo = true;
-                actualWeapon.infiniteAmmoBonus = false;
             }
             else if (actualWeapon.allAmmoBonus)
             {
@@ -68,23 +70,44 @@ public class PlayerShoot : MonoBehaviour
                 actualWeapon.Reset();
                 actualWeapon.allAmmoBonus = false;
                 durationBonus = 10f;
+                bonus = false;
                 actualWeapon.isBonus = false;
             }
             else if(actualWeapon.damageUpBonus)
             {
                 Debug.Log("damage");
                 actualWeapon.damage *= 2;
-                actualWeapon.damageUpBonus = false;
             }
+        }
+
+        if (_startCountdownBonus)
+        {
+            durationBonus -= Time.deltaTime;
         }
 
         if (durationBonus <= 0)
         {
             Debug.Log("fin bonus");
+            bonus = false;
+            
+            if (actualWeapon.fireRateBonus)
+            {
+                actualWeapon.fireRate *= 2;
+                actualWeapon.fireRateBonus = false;
+            }
+            else if(actualWeapon.infiniteAmmoBonus)
+            {
+                notUsingAmmo = false;
+                actualWeapon.infiniteAmmoBonus = false;
+            }
+            else if(actualWeapon.damageUpBonus)
+            {
+                actualWeapon.damage /= 2;
+                actualWeapon.damageUpBonus = false;
+            }
+            
             actualWeapon.isBonus = false;
-            fireRate *= 2;
-            notUsingAmmo = false;
-            actualWeapon.damage /= 2;
+
             durationBonus = 10f;
         }
         
@@ -227,7 +250,10 @@ public class PlayerShoot : MonoBehaviour
             GameObject obj = objectPooler.SpawnFromPool("PlayerBullet", firePoint.position, firePoint.rotation);
             obj.GetComponent<PlayerBullet>().degats = actualWeapon.damage;
             AudioManager.audioManager.Play(actualWeapon.weaponSound);
-            actualWeapon.actualAmmo--;
+            if (!notUsingAmmo)
+            {
+                actualWeapon.actualAmmo--;
+            }
         }
         else if (Time.time >= fireRate && actualWeapon.actualAmmo <= 0 && actualWeapon.totalAmmo > 0)
         {

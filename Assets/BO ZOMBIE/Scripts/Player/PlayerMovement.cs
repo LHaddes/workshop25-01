@@ -44,7 +44,14 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        AnimatorWalking.SetBool("IsWalking", true);
+        if (horizontal != 0 || vertical != 0)
+        {
+            AnimatorWalking.SetBool("IsWalking", true);
+        }
+        else
+        {
+            AnimatorWalking.SetBool("IsWalking", false);
+        }
 
         txtScore.text = $"Score : " + score.ToString("F0");
 
@@ -57,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (_isNearBox)
         {
-            if (Input.GetButtonDown("Interact") /*&& score > other.gameObject.GetComponent<MysteryBox>().cost*/)
+            if (Input.GetButtonDown("Interact") && score > FindObjectOfType<MysteryBox>().cost)
             {
                 score -= FindObjectOfType<MysteryBox>().cost;
                 Debug.Log("Interaction");
@@ -93,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Mystery Box"))
+        if (other.gameObject.CompareTag("Mystery Box") && !GetComponent<PlayerShoot>().bonus)
         {
             _isNearBox = true;
             other.gameObject.GetComponent<MysteryBox>().uiText.SetActive(true);

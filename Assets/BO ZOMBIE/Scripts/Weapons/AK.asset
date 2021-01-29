@@ -23,6 +23,4 @@ MonoBehaviour:
   reloadTime: 0.6
   fireRate: 0.2
   damage: 2
-  saveActualAmmo: 30
-  saveTotalAmmo: 90
   weaponSound: Mitraillette

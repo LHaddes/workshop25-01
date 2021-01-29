@@ -16,22 +16,31 @@ public class Weapon : ScriptableObject
     public int damage;
 
 
-    public int saveActualAmmo;
-    public int saveTotalAmmo;
+    private int saveActualAmmo;
+    private int saveTotalAmmo;
+    private int saveDamage;
+    private float saveFireRate;
+    
 
     public string weaponSound;
     
     
     void OnEnable()
     {
+        isBonus = false;
         saveActualAmmo = actualAmmo;
         saveTotalAmmo = totalAmmo;
+        saveDamage = damage;
+        saveFireRate = fireRate;
     }
 
     void OnDisable()
     {
+        isBonus = false;
         actualAmmo = saveActualAmmo;
         totalAmmo = saveTotalAmmo;
+        damage = saveDamage;
+        fireRate = saveFireRate;
     }
 
     public void Reset()

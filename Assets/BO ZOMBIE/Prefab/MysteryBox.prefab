@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c385ca526fc8ad744bdb1afc89060e35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 10
+  cost: 150
   uiText: {fileID: 0}
   weaponList:
   - {fileID: 11400000, guid: 4bf0d3e2c181dfa43903fd5297cba079, type: 2}
@@ -73,7 +73,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  bonusCount: 0
+  bonusCount: 4
 --- !u!1 &2473445470601594509
 GameObject:
   m_ObjectHideFlags: 0

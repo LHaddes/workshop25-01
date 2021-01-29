@@ -17,9 +17,9 @@ MonoBehaviour:
   infiniteAmmoBonus: 0
   allAmmoBonus: 0
   damageUpBonus: 0
-  actualAmmo: 1
+  actualAmmo: 6
   magazineAmmo: 6
-  totalAmmo: 19
+  totalAmmo: 24
   reloadTime: 0.6
   fireRate: 1
   damage: 2
