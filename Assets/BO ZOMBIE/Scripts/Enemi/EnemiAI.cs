@@ -114,7 +114,7 @@ public class EnemiAI : MonoBehaviour
     {
         if (other.CompareTag("Barricade"))
         {
-            if (other.GetComponent<Barricades>().life == 0)
+            if (other.GetComponent<Barricades>().life <= 0)
             {
                 speed = 250;
             }
