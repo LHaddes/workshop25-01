@@ -206,6 +206,11 @@ PrefabInstance:
       propertyPath: weaponSprite
       value: 
       objectReference: {fileID: 1458259145}
+    - target: {fileID: 4967769496057145127, guid: b469bfdc32880ec41849de530bed9753,
+        type: 3}
+      propertyPath: imageLifebar
+      value: 
+      objectReference: {fileID: 304044150}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b469bfdc32880ec41849de530bed9753, type: 3}
 --- !u!1001 &47652912
@@ -774,6 +779,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 529015094}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &304044150 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1146871323579047727, guid: 39104f03b0cbc964dae171eeba36f91b,
+    type: 3}
+  m_PrefabInstance: {fileID: 892032678}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &439822217
 GameObject:
   m_ObjectHideFlags: 0
