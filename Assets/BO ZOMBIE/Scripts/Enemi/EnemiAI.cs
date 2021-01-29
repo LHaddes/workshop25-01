@@ -5,7 +5,7 @@ public class EnemiAI : MonoBehaviour
 {
     public Transform target;
 
-    public float speed = 400;
+    public float speed;
     public float nextWaypointDistance = 3f;
     
 
@@ -112,7 +112,7 @@ public class EnemiAI : MonoBehaviour
         {
             if (other.GetComponent<Barricades>().life == 0)
             {
-                speed = 400;
+                speed = 250;
             }
             else
             {
