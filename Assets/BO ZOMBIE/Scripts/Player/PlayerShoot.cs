@@ -131,6 +131,8 @@ public class PlayerShoot : MonoBehaviour
 
                 ammoText.text = $"{actualWeapon.actualAmmo} / {actualWeapon.totalAmmo}";    //On met à jour l'ui
 
+                AudioManager.audioManager.Play("ReloadCompleted");
+
                 _reloadTime = 0;
                 _isReloading = false;
             }

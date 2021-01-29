@@ -599,7 +599,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Mitraillette
     clip: {fileID: 8300000, guid: 167f74a7bf8fdf54dbf48638c3551fe6, type: 3}
-    volume: 1
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -609,16 +609,16 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: GunShot
-    clip: {fileID: 8300000, guid: 04347afa822bd814388d216e1e4401e4, type: 3}
-    volume: 0.9
-    pitch: 0
+  - name: WaveIncoming
+    clip: {fileID: 8300000, guid: 6d15b538d080f82489f0d4562d89dd1e, type: 3}
+    volume: 0.2
+    pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: GunShot
-    clip: {fileID: 8300000, guid: 04347afa822bd814388d216e1e4401e4, type: 3}
-    volume: 0.9
-    pitch: 0
+  - name: ReloadCompleted
+    clip: {fileID: 8300000, guid: 1bb7e210068bbd648bd38c638673980c, type: 3}
+    volume: 0.2
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: GunShot
