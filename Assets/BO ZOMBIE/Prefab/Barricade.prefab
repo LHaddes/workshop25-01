@@ -99,10 +99,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 5
   sprites:
-  - {fileID: 1130255785812074583, guid: 1d3e5f8d74d42144db014de2348d4d29, type: 3}
-  - {fileID: 3165308727135670524, guid: 1d3e5f8d74d42144db014de2348d4d29, type: 3}
-  - {fileID: 3689766171440893125, guid: 1d3e5f8d74d42144db014de2348d4d29, type: 3}
-  - {fileID: 2681688521052092616, guid: 1d3e5f8d74d42144db014de2348d4d29, type: 3}
+  - {fileID: 179173025687594190, guid: 008b33547a61dea4e834221be66e2bcd, type: 3}
+  - {fileID: 249474559980975759, guid: 008b33547a61dea4e834221be66e2bcd, type: 3}
+  - {fileID: 7999969274959407159, guid: 008b33547a61dea4e834221be66e2bcd, type: 3}
+  - {fileID: -1467934737977065176, guid: 008b33547a61dea4e834221be66e2bcd, type: 3}
+  - {fileID: 7896550137810336082, guid: 008b33547a61dea4e834221be66e2bcd, type: 3}
 --- !u!61 &1611231235147075819
 BoxCollider2D:
   m_ObjectHideFlags: 0
