@@ -34,7 +34,6 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(_nextFire);
         if (Input.GetButton("Fire1") && Time.time > _nextFire && canShoot)
         {
             fireRate = actualWeapon.fireRate;
@@ -196,7 +195,7 @@ public class PlayerShoot : MonoBehaviour
         {
             GameObject obj = objectPooler.SpawnFromPool("PlayerBullet", firePoint.position, firePoint.rotation);
             obj.GetComponent<PlayerBullet>().degats = actualWeapon.damage;
-            AudioManager.audioManager.Play("GunShot");
+            AudioManager.audioManager.Play(actualWeapon.weaponSound);
             actualWeapon.actualAmmo--;
         }
         else if (Time.time >= fireRate && actualWeapon.actualAmmo <= 0 && actualWeapon.totalAmmo > 0)
