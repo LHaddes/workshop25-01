@@ -39,6 +39,7 @@ public class GameplayManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioManager.audioManager.Play("BGM");
         Time.timeScale = 1f;
         player = GameObject.FindWithTag("Player");
         StartWave();

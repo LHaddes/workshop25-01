@@ -19,6 +19,7 @@ public class Barricades : MonoBehaviour
     {
         if (life < 0)
         {
+            AudioManager.audioManager.Play("BarricadeDown");
             life = 0;
         }
 
@@ -36,6 +37,7 @@ public class Barricades : MonoBehaviour
         }
         else if (life <= 0)
         {
+           
             GetComponent<SpriteRenderer>().sprite = sprites[3];
         }
     }

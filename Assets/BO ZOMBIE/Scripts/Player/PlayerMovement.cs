@@ -116,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
             speed = 0;
             if (other.GetComponent<Barricades>().life < 5)
             {
+                AudioManager.audioManager.Play("BarricadeConstruct");
                 other.GetComponent<Barricades>().life += Time.deltaTime*1.7f;
                 score += Time.deltaTime*2;
             }
