@@ -177,6 +177,10 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 0.64
       objectReference: {fileID: 0}
+    - target: {fileID: 1786503699, guid: b469bfdc32880ec41849de530bed9753, type: 3}
+      propertyPath: txtScore
+      value: 
+      objectReference: {fileID: 249839224}
     - target: {fileID: 1379976688810135530, guid: b469bfdc32880ec41849de530bed9753,
         type: 3}
       propertyPath: m_Name
@@ -571,7 +575,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: GunShot
     clip: {fileID: 8300000, guid: 04347afa822bd814388d216e1e4401e4, type: 3}
-    volume: 0.9
+    volume: 1
     pitch: 0
     loop: 0
     source: {fileID: 0}

@@ -8,11 +8,7 @@ public class GameplayManager : MonoBehaviour
 {
     [Header("Text")]
     public TextMeshProUGUI nbEnemisText;
-    public TextMeshProUGUI nbMoneyText;
-
-    /*public Transform[] posForMagicBoxes;
-
-    public GameObject MagicBox;*/
+   
     
 
     public GameObject player;
@@ -63,20 +59,12 @@ public class GameplayManager : MonoBehaviour
                 countdownBetweenTwoWaves = 10f;
             }
         }
-
-        nbMoneyText.text = $"Score : {Mathf.FloorToInt(player.GetComponent<PlayerMovement>().score).ToString()}";
     }
     
     public void UpdateEnemis()
     {
         nbEnemisText.text = $"Remaining : {actualNbEnemies}\n" +
                             $"Wave : {nbWave}";
-    }
-
-    public void UpdateMoney(float nbMoney)
-    {
-        player.GetComponent<PlayerMovement>().score += nbMoney;
-        nbMoneyText.text = $"Score : {Mathf.FloorToInt(player.GetComponent<PlayerMovement>().score).ToString()}";
     }
 
     public void StartWave()

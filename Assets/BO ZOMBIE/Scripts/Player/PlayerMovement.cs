@@ -19,8 +19,8 @@ public class PlayerMovement : MonoBehaviour
     public float score;
     public TextMeshProUGUI txtScore;
 
-    public bool _isNearBox;
-
+    public bool _isNearBox;
+
     public Animator animator;
 
 
@@ -37,11 +37,11 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         
-        moveDir = new Vector2(horizontal, vertical);
-
-        animator.SetBool("IsWalking", true);
-
-        //        txtScore.text = "score : " + score.ToString("F0");
+        moveDir = new Vector2(horizontal, vertical);
+
+        animator.SetBool("IsWalking", true);
+
+        txtScore.text = $"Score : {score}";
 
         if (_isNearBox)
         {
@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetButtonDown("Interact") /*&& score > other.gameObject.GetComponent<MysteryBox>().cost*/)
             {
-                GameplayManager.gameplayManager.UpdateMoney(-other.gameObject.GetComponent<MysteryBox>().cost);
+                score -= other.gameObject.GetComponent<MysteryBox>().cost;
                 Debug.Log("Interaction");
                 //GetComponent<PlayerShoot>().ReplaceWeapon(other.gameObject.GetComponent<MysteryBox>().MysteryWeapon());
                 GetComponent<PlayerShoot>().actualWeapon.isBonus = true;
