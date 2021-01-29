@@ -46,18 +46,23 @@ public class PlayerMovement : MonoBehaviour
 
         AnimatorWalking.SetBool("IsWalking", true);
 
-
-
         txtScore.text = $"Score : {score}";
+
+        if (Input.GetButtonDown("Interact"))
+        {
+            Debug.Log("e");
+        }
+        
+
 
         if (_isNearBox)
         {
-            if (Input.GetButtonDown("Interact") && score > FindObjectOfType<MysteryBox>().cost)
+            if (Input.GetButtonDown("Interact") /*&& score > other.gameObject.GetComponent<MysteryBox>().cost*/)
             {
+                score -= FindObjectOfType<MysteryBox>().cost;
                 Debug.Log("Interaction");
-                //Weapon weapon = FindObjectOfType<MysteryBox>().MysteryWeapon();
-                GetComponent<PlayerShoot>().actualWeapon.fireRateBonus = true;
-                //GetComponent<PlayerShoot>().ReplaceWeapon(weapon);
+                //GetComponent<PlayerShoot>().ReplaceWeapon(other.gameObject.GetComponent<MysteryBox>().MysteryWeapon());
+                FindObjectOfType<MysteryBox>().Bonus();
             }
         }
     }
@@ -91,21 +96,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Mystery Box"))
         {
             _isNearBox = true;
-            
             other.gameObject.GetComponent<MysteryBox>().uiText.SetActive(true);
-            other.gameObject.GetComponent<MysteryBox>().uiText.GetComponent<TMP_Text>().text +=
-                $"\nCost : {other.gameObject.GetComponent<MysteryBox>().cost}";
-
-            if (Input.GetButtonDown("Interact") /*&& score > other.gameObject.GetComponent<MysteryBox>().cost*/)
-            {
-                score -= other.gameObject.GetComponent<MysteryBox>().cost;
-                Debug.Log("Interaction");
-                //GetComponent<PlayerShoot>().ReplaceWeapon(other.gameObject.GetComponent<MysteryBox>().MysteryWeapon());
-                GetComponent<PlayerShoot>().actualWeapon.fireRateBonus = true;
-                AnimatorMB.SetBool("MBOpened", true);
-            }
-
-            
         }
     }
     

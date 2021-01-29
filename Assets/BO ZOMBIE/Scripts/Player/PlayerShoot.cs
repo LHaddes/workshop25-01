@@ -42,7 +42,7 @@ public class PlayerShoot : MonoBehaviour
             _nextFire = Time.time + fireRate;
             Shoot(); 
             
-            animator.SetBool("IsFiring", true);
+            //animator.SetBool("IsFiring", true);
         }
         
         
@@ -52,16 +52,19 @@ public class PlayerShoot : MonoBehaviour
 
             if (actualWeapon.fireRateBonus)
             {
+                Debug.Log("firerate");
                 fireRate /= 2;
                 actualWeapon.fireRateBonus = false;
             }
             else if(actualWeapon.infiniteAmmoBonus)
             {
+                Debug.Log("infinite");
                 notUsingAmmo = true;
                 actualWeapon.infiniteAmmoBonus = false;
             }
             else if (actualWeapon.allAmmoBonus)
             {
+                Debug.Log("reload");
                 actualWeapon.Reset();
                 actualWeapon.allAmmoBonus = false;
                 durationBonus = 10f;
@@ -69,6 +72,7 @@ public class PlayerShoot : MonoBehaviour
             }
             else if(actualWeapon.damageUpBonus)
             {
+                Debug.Log("damage");
                 actualWeapon.damage *= 2;
                 actualWeapon.damageUpBonus = false;
             }
@@ -76,6 +80,7 @@ public class PlayerShoot : MonoBehaviour
 
         if (durationBonus <= 0)
         {
+            Debug.Log("fin bonus");
             actualWeapon.isBonus = false;
             fireRate *= 2;
             notUsingAmmo = false;

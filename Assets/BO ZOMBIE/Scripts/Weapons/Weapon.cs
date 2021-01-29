@@ -16,8 +16,8 @@ public class Weapon : ScriptableObject
     public int damage;
 
 
-    private int saveActualAmmo;
-    private int saveTotalAmmo;
+    public int saveActualAmmo;
+    public int saveTotalAmmo;
 
     public string weaponSound;
     

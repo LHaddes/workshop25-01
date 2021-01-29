@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b99ca6f83ddc424c93913b350ce6a2e, type: 3}
   m_Name: AK
   m_EditorClassIdentifier: 
-  isAuto: 1
   isBonus: 0
-  actualAmmo: 13
+  fireRateBonus: 0
+  infiniteAmmoBonus: 0
+  allAmmoBonus: 0
+  damageUpBonus: 0
+  actualAmmo: 30
   magazineAmmo: 30
   totalAmmo: 90
   reloadTime: 0.6
-  fireRate: 0.3
+  fireRate: 0.2
   damage: 2
+  saveActualAmmo: 30
+  saveTotalAmmo: 90
   weaponSound: Mitraillette

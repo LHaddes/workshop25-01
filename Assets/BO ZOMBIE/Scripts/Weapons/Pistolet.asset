@@ -12,12 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b99ca6f83ddc424c93913b350ce6a2e, type: 3}
   m_Name: Pistolet
   m_EditorClassIdentifier: 
-  isAuto: 0
   isBonus: 0
-  actualAmmo: 2
+  fireRateBonus: 0
+  infiniteAmmoBonus: 0
+  allAmmoBonus: 0
+  damageUpBonus: 0
+  actualAmmo: 1
   magazineAmmo: 6
-  totalAmmo: 24
+  totalAmmo: 19
   reloadTime: 0.6
   fireRate: 1
   damage: 2
+  saveActualAmmo: 6
+  saveTotalAmmo: 24
   weaponSound: GunShoot
