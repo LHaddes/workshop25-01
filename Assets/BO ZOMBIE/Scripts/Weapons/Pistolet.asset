@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Pistolet
   m_EditorClassIdentifier: 
   isAuto: 0
-  isBonus: 1
-  actualAmmo: 6
+  isBonus: 0
+  actualAmmo: 2
   magazineAmmo: 6
   totalAmmo: 24
   reloadTime: 0.6
   fireRate: 1
   damage: 2
+  weaponSound: GunShoot

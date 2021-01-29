@@ -19,6 +19,7 @@ public class Weapon : ScriptableObject
     private int saveActualAmmo;
     private int saveTotalAmmo;
 
+    public string weaponSound;
     void OnEnable()
     {
         saveActualAmmo = actualAmmo;

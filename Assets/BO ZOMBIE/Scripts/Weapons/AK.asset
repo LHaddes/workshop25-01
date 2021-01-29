@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: AK
   m_EditorClassIdentifier: 
   isAuto: 1
-  isBonus: 1
-  actualAmmo: 18
+  isBonus: 0
+  actualAmmo: 13
   magazineAmmo: 30
   totalAmmo: 90
   reloadTime: 0.6
   fireRate: 0.3
   damage: 2
+  weaponSound: Mitraillette

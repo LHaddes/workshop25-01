@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Mitrailleuse
   m_EditorClassIdentifier: 
   isAuto: 1
+  isBonus: 0
   actualAmmo: 100
   magazineAmmo: 100
   totalAmmo: 500
   reloadTime: 2
   fireRate: 0.2
   damage: 1
+  weaponSound: Mitraillette
