@@ -10,6 +10,7 @@ public class EnemiAI : MonoBehaviour
     
 
     private float _hitRate = 1f;
+    private float _soundRate = .4f;
     
     private Path _path;
 
@@ -120,7 +121,12 @@ public class EnemiAI : MonoBehaviour
             }
             else
             {
-                AudioManager.audioManager.Play("BarricadeHit");
+                _soundRate -= Time.deltaTime;
+                if (_soundRate <= 0)
+                {
+                    AudioManager.audioManager.Play("BarricadeHit");
+                    _soundRate = .4f;
+                }
                 speed = 0;
                 other.GetComponent<Barricades>().life -= Time.deltaTime;
             }
