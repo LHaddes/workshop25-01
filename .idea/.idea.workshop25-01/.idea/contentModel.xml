@@ -221,6 +221,7 @@
             </e>
             <e p="EnemySpawner.cs" t="Include" />
             <e p="Manager" t="Include">
+              <e p="AudioManager.cs" t="Include" />
               <e p="ButtonManager.cs" t="Include" />
               <e p="GameplayManager.cs" t="Include" />
               <e p="Interface" t="Include">
@@ -228,6 +229,7 @@
               </e>
               <e p="ObjectPooler.cs" t="Include" />
               <e p="PauseManager.cs" t="Include" />
+              <e p="Sound.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
               <e p="CameraToPlayer.cs" t="Include" />

@@ -196,7 +196,7 @@ public class PlayerShoot : MonoBehaviour
         {
             GameObject obj = objectPooler.SpawnFromPool("PlayerBullet", firePoint.position, firePoint.rotation);
             obj.GetComponent<PlayerBullet>().degats = actualWeapon.damage;
-
+            AudioManager.audioManager.Play("GunShot");
             actualWeapon.actualAmmo--;
         }
         else if (Time.time >= fireRate && actualWeapon.actualAmmo <= 0 && actualWeapon.totalAmmo > 0)
