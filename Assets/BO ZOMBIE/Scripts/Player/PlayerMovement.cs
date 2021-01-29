@@ -26,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
     public Animator AnimatorWalking;
     public Animator AnimatorMB;
 
+    public float timerConstruct = .8f;
+
 
     // Start is called before the first frame update
     void Start()
@@ -129,7 +131,14 @@ public class PlayerMovement : MonoBehaviour
             speed = 0;
             if (other.GetComponent<Barricades>().life < 5)
             {
-                AudioManager.audioManager.Play("BarricadeConstruct");
+                timerConstruct += Time.deltaTime;
+                if (timerConstruct >= .8f)
+                {
+                    AudioManager.audioManager.Play("BarricadeConstruct");
+                    timerConstruct = 0;
+                }
+                
+                    
                 other.GetComponent<Barricades>().life += Time.deltaTime*1.7f;
                 score += Time.deltaTime*2;
             }

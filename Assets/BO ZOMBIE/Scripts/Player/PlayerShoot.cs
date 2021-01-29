@@ -149,13 +149,12 @@ public class PlayerShoot : MonoBehaviour
             if (actualWeapon.actualAmmo <= actualWeapon.magazineAmmo && actualWeapon.totalAmmo > 0)
             {
                 _isReloading = true;
+                AudioManager.audioManager.Play("GunReloading");
             }
         }
 
         if (_isReloading)
         {
-            AudioManager.audioManager.Play("GunReloading");
-
             _reloadTime += Time.deltaTime;
             canSwitchWeapon = false;
             canShoot = false;    //On empêche le tir pendant le rechargement

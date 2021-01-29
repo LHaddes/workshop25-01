@@ -57,8 +57,8 @@ public class MysteryBox : MonoBehaviour
                 FindObjectOfType<PlayerShoot>().actualWeapon.damageUpBonus = true;
                 break;
         }
-        
-        Debug.Log(random);
+
+        _counter++;
     }
 
 

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Pathfinding;
 
-public class EnemiAI : MonoBehaviour,IPooledObject
+public class EnemiAI : MonoBehaviour
 {
     public Transform target;
 
@@ -14,7 +14,7 @@ public class EnemiAI : MonoBehaviour,IPooledObject
     
     private Path _path;
 
-    public int life = 2;
+    public int life =5;
     public int damage = 1;
     
     private int _currentWaypoint;
@@ -134,9 +134,15 @@ public class EnemiAI : MonoBehaviour,IPooledObject
         }
     }
 
-
-    public void OnObjectSpawn()
+    public void OnEnable()
     {
         life = 5;
+        playerInRange = false;
+    }
+
+    public void OnDisable()
+    {
+        life = 5;
+        playerInRange = false;
     }
 }
