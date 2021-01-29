@@ -23,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    public Animator animator;
+    public Animator AnimatorWalking;
+    public Animator AnimatorMB;
 
 
     // Start is called before the first frame update
@@ -43,7 +44,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        animator.SetBool("IsWalking", true);
+        AnimatorWalking.SetBool("IsWalking", true);
 
 
 
@@ -101,7 +102,10 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("Interaction");
                 //GetComponent<PlayerShoot>().ReplaceWeapon(other.gameObject.GetComponent<MysteryBox>().MysteryWeapon());
                 GetComponent<PlayerShoot>().actualWeapon.fireRateBonus = true;
+                AnimatorMB.SetBool("MBOpened", true);
             }
+
+            
         }
     }
     
