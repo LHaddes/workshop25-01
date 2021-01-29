@@ -603,10 +603,10 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: GunShot
-    clip: {fileID: 8300000, guid: 04347afa822bd814388d216e1e4401e4, type: 3}
-    volume: 0.9
-    pitch: 0
+  - name: BarricadeHit
+    clip: {fileID: 8300000, guid: f0f7e09ba4c677249a92a33b273b32b8, type: 3}
+    volume: 0.2
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: GunShot

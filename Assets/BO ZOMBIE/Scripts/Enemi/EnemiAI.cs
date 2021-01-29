@@ -120,6 +120,7 @@ public class EnemiAI : MonoBehaviour
             }
             else
             {
+                AudioManager.audioManager.Play("BarricadeHit");
                 speed = 0;
                 other.GetComponent<Barricades>().life -= Time.deltaTime;
             }
