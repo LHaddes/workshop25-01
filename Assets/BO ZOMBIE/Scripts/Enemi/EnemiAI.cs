@@ -64,6 +64,7 @@ public class EnemiAI : MonoBehaviour
         
         if (life <= 0)
         {
+            AudioManager.audioManager.Play("ZombieDie");
             target.GetComponent<PlayerMovement>().score += 15;
             GameplayManager.gameplayManager.actualNbEnemies--;
             GameplayManager.gameplayManager.UpdateEnemis();

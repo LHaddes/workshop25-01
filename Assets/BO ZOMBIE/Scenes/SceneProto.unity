@@ -780,6 +780,30 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: ZombieDie
+    clip: {fileID: 8300000, guid: e1614291ba03415468624f008b585d6b, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MitrailletteReloading
+    clip: {fileID: 8300000, guid: f1be524bdc82308449ef22aaa60b8981, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MitrailletteReloading
+    clip: {fileID: 8300000, guid: f1be524bdc82308449ef22aaa60b8981, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: MitrailletteReloading
+    clip: {fileID: 8300000, guid: f1be524bdc82308449ef22aaa60b8981, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &232429066
 Transform:
   m_ObjectHideFlags: 0
