@@ -7,12 +7,14 @@ public class EnemiAI : MonoBehaviour
 
     public float speed = 400;
     public float nextWaypointDistance = 3f;
+    
 
     private float _hitRate = 1f;
     
     private Path _path;
 
     public int life = 2;
+    public int damage = 1;
     
     private int _currentWaypoint;
 
@@ -49,8 +51,7 @@ public class EnemiAI : MonoBehaviour
             _hitRate -= Time.deltaTime;
             if (_hitRate <= 0)
             {
-                //TODO appliquer les dégâts au player
-                //player.GetComponent<PlayerLife>().Hurt(1);
+                target.GetComponent<PlayerLife>().Hurt(damage);
                 Debug.Log("je touche le joueur");
                 _hitRate = 1f;
             }
