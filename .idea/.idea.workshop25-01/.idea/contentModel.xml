@@ -232,6 +232,7 @@
               <e p="CameraToPlayer.cs" t="Include" />
               <e p="PlayerLife.cs" t="Include" />
               <e p="PlayerMovement.cs" t="Include" />
+              <e p="PlayerMovementTEST.cs" t="Include" />
               <e p="PlayerShoot.cs" t="Include" />
             </e>
             <e p="Weapons" t="Include">
