@@ -10,7 +10,7 @@ public class PlayerShoot : MonoBehaviour
     public List<Weapon> inventory = new List<Weapon>(2);
     public int actualWeaponID;
     public bool canSwitchWeapon = true;
-
+    public Animator animator;
 
     [Space] [Header("Shooting")] 
     public bool canShoot = true;
@@ -37,9 +37,11 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time > _nextFire && canShoot)
         {
             fireRate = actualWeapon.fireRate;
-            
+
             _nextFire = Time.time + fireRate;
-            Shoot();
+            Shoot(); 
+            
+            animator.SetBool("IsFiring", true);
         }
 
         if (actualWeapon.isBonus)
