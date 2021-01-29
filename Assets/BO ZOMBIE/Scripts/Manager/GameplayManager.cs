@@ -41,6 +41,7 @@ public class GameplayManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         player = GameObject.FindWithTag("Player");
+        AudioManager.audioManager.Play("BGM");
         StartWave();
     }
 
