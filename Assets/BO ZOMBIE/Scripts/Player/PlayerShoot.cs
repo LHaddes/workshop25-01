@@ -34,22 +34,22 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(_nextFire);
         if (Input.GetButton("Fire1") && Time.time > _nextFire && canShoot)
         {
             fireRate = actualWeapon.fireRate;
-
+            if (actualWeapon.isBonus)
+            {
+                fireRate /= 2;
+                _startCountdownBonus = true;
+            }
             _nextFire = Time.time + fireRate;
             Shoot(); 
             
             animator.SetBool("IsFiring", true);
         }
 
-        if (actualWeapon.isBonus)
-        {
-            actualWeapon.fireRate /= 2;
-            _startCountdownBonus = true;
-        }
-
+        
         if (_startCountdownBonus)
         {
             _durationBonus -= Time.deltaTime;
@@ -58,10 +58,10 @@ public class PlayerShoot : MonoBehaviour
         if (_durationBonus <= 0)
         {
             actualWeapon.isBonus = false;
-            actualWeapon.fireRate *= 2;
             _startCountdownBonus = false;
             _durationBonus = 10f;
         }
+        
         #region Scroll pour le changement d'armes
 
         if (Input.mouseScrollDelta.y != 0)    //Si on tourne la molette de la souris

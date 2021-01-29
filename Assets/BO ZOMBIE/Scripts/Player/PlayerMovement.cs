@@ -49,8 +49,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 Debug.Log("Interaction");
                 Weapon weapon = FindObjectOfType<MysteryBox>().MysteryWeapon();
-            
-                GetComponent<PlayerShoot>().ReplaceWeapon(weapon);
+                GetComponent<PlayerShoot>().actualWeapon.isBonus = true;
+                //GetComponent<PlayerShoot>().ReplaceWeapon(weapon);
             }
         }
     }
