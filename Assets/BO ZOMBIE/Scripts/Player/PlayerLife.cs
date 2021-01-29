@@ -22,6 +22,7 @@ public class PlayerLife : MonoBehaviour
     {
         if (!isInvulnerable)
         {
+            AudioManager.audioManager.Play("PlayerHurt");
             currentLifePoints -= damage;
             isInvulnerable = true;
         }

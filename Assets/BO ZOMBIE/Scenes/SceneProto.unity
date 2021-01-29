@@ -575,6 +575,24 @@ MonoBehaviour:
     pitch: 0
     loop: 0
     source: {fileID: 0}
+  - name: PlayerHurt
+    clip: {fileID: 8300000, guid: c3ca6e3e6934f8c45afa58e748687cd7, type: 3}
+    volume: 0.6
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: GunShot
+    clip: {fileID: 8300000, guid: 04347afa822bd814388d216e1e4401e4, type: 3}
+    volume: 0.9
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: GunShot
+    clip: {fileID: 8300000, guid: 04347afa822bd814388d216e1e4401e4, type: 3}
+    volume: 0.9
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &232429066
 Transform:
   m_ObjectHideFlags: 0
