@@ -56,6 +56,7 @@ public class GameplayManager : MonoBehaviour
             
             if (countdownBetweenTwoWaves <= 0)
             {
+                AudioManager.audioManager.Play("WaveIncoming");
                 nbEnemies += Random.Range(4, 8);
                 StartWave();
                 countdownBetweenTwoWaves = 10f;
