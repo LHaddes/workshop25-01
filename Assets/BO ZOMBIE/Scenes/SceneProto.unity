@@ -569,20 +569,50 @@ MonoBehaviour:
   sounds:
   - name: BGM
     clip: {fileID: 8300000, guid: fa70fbe28b3d06040b42aed1e8da0eb1, type: 3}
-    volume: 1
+    volume: 0.1
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: GunShot
     clip: {fileID: 8300000, guid: 04347afa822bd814388d216e1e4401e4, type: 3}
-    volume: 1
-    pitch: 0
+    volume: 0.3
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: PlayerHurt
     clip: {fileID: 8300000, guid: c3ca6e3e6934f8c45afa58e748687cd7, type: 3}
     volume: 0.6
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BarricadeConstruct
+    clip: {fileID: 8300000, guid: 0b6fa0b2f812b9442951f3a35aae62cb, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BarricadeDown
+    clip: {fileID: 8300000, guid: 6c59ebf33cfbcba45a597b445008c204, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GunShot
+    clip: {fileID: 8300000, guid: 04347afa822bd814388d216e1e4401e4, type: 3}
+    volume: 0.9
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: GunShot
+    clip: {fileID: 8300000, guid: 04347afa822bd814388d216e1e4401e4, type: 3}
+    volume: 0.9
+    pitch: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: GunShot
+    clip: {fileID: 8300000, guid: 04347afa822bd814388d216e1e4401e4, type: 3}
+    volume: 0.9
+    pitch: 0
     loop: 0
     source: {fileID: 0}
   - name: GunShot
@@ -7377,7 +7407,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1943549034
 PrefabInstance:
