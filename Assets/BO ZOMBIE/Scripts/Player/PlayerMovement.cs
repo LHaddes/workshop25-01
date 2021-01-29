@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool _isNearBox;
 
+    public Animator animator;
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +39,9 @@ public class PlayerMovement : MonoBehaviour
         
         moveDir = new Vector2(horizontal, vertical);
 
-//        txtScore.text = "score : " + score.ToString("F0");
+        animator.SetBool("IsWalking", true);
+
+        //        txtScore.text = "score : " + score.ToString("F0");
 
         if (_isNearBox)
         {
