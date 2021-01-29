@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerLife : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class PlayerLife : MonoBehaviour
     public bool isInvulnerable;
     public float invincibilityBlink;
     private float timer;
+
+    public Sprite[] lifebar;
+    public Image imageLifebar;
     
     // Start is called before the first frame update
     void Start()
@@ -24,6 +28,7 @@ public class PlayerLife : MonoBehaviour
         {
             AudioManager.audioManager.Play("PlayerHurt");
             currentLifePoints -= damage;
+            imageLifebar.sprite = lifebar[currentLifePoints];
             isInvulnerable = true;
         }
     }

@@ -234,6 +234,7 @@ MonoBehaviour:
   objectPooler: {fileID: 0}
   ammoText: {fileID: 0}
   durationBonus: 10
+  bonus: 0
 --- !u!58 &1858908467136657866
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -262,10 +263,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e848d0f89cd57043bb6eff5c8a241e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLifePoints: 5
-  currentLifePoints: 5
+  maxLifePoints: 4
+  currentLifePoints: 4
   isInvulnerable: 0
   invincibilityBlink: 0.2
+  lifebar:
+  - {fileID: -9080147238674636580, guid: ee2d00d3e470fb1488e200a7bcdca375, type: 3}
+  - {fileID: -999431921623725339, guid: ee2d00d3e470fb1488e200a7bcdca375, type: 3}
+  - {fileID: -7443983437740032489, guid: ee2d00d3e470fb1488e200a7bcdca375, type: 3}
+  - {fileID: 3660509121030049364, guid: ee2d00d3e470fb1488e200a7bcdca375, type: 3}
+  - {fileID: -2875110855394992400, guid: ee2d00d3e470fb1488e200a7bcdca375, type: 3}
+  imageLifebar: {fileID: 0}
 --- !u!1 &1379976689663099591
 GameObject:
   m_ObjectHideFlags: 0
