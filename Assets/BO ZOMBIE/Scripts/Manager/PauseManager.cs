@@ -41,7 +41,7 @@ public class PauseManager : MonoBehaviour
 
     public void Menu()
     {
-        //TODO Retour au menu principal
+        SceneManager.LoadScene(0);
     }
 
     public void Restart()

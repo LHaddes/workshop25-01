@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
+    path: Assets/BO ZOMBIE/Scenes/Menu.unity
+    guid: 0aa7b5284dc9a9d438995c738b3a4380
+  - enabled: 1
     path: Assets/BO ZOMBIE/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/KID ICARUS/Scenes/SamuelScene.unity
-    guid: ea50bf978ceb9d44796930c2f4d9e038
   m_configObjects: {}
