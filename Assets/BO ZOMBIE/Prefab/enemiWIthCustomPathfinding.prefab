@@ -189,7 +189,7 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 300
   nextWaypointDistance: 3
-  life: 2
+  life: 5
   playerInRange: 0
 --- !u!114 &312632387
 MonoBehaviour:

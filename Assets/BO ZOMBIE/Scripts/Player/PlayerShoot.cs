@@ -192,9 +192,8 @@ public class PlayerShoot : MonoBehaviour
     {
         if (Time.time >= fireRate && actualWeapon.actualAmmo > 0)
         {
-            Debug.Log("Shoot" + fireRate);
-            //TODO Tir du player
             GameObject obj = objectPooler.SpawnFromPool("PlayerBullet", firePoint.position, firePoint.rotation);
+            obj.GetComponent<PlayerBullet>().degats = actualWeapon.damage;
 
             actualWeapon.actualAmmo--;
         }

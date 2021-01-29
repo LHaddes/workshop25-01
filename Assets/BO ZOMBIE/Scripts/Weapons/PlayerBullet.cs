@@ -12,6 +12,7 @@ public class PlayerBullet : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        Debug.Log(degats);
         //_rb.AddForce(transform.up * speed, ForceMode2D.Impulse);
     }
 
@@ -31,7 +32,7 @@ public class PlayerBullet : MonoBehaviour
 
         if (other.gameObject.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<EnemiAI>().life--;
+            other.gameObject.GetComponent<EnemiAI>().life -= degats;
             gameObject.SetActive(false);
         }
     }
