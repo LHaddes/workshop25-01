@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 1786503699}
   - component: {fileID: 4527412337363347382}
   - component: {fileID: 1858908467136657866}
+  - component: {fileID: 4967769496057145127}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -185,6 +186,7 @@ MonoBehaviour:
   angle: 0
   score: 0
   txtScore: {fileID: 0}
+  _isNearBox: 0
 --- !u!114 &4527412337363347382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +226,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
+--- !u!114 &4967769496057145127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379976688810135530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e848d0f89cd57043bb6eff5c8a241e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLifePoints: 10
+  currentLifePoints: 10
+  isInvulnerable: 0
+  invincibilityBlink: 0.2
 --- !u!1 &1379976689663099591
 GameObject:
   m_ObjectHideFlags: 0

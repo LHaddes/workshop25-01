@@ -9,26 +9,24 @@ public class GameplayManager : MonoBehaviour
     [Header("Text")]
     public TextMeshProUGUI nbEnemisText;
     public TextMeshProUGUI nbMoneyText;
-    public TextMeshProUGUI timerText;
 
     /*public Transform[] posForMagicBoxes;
 
     public GameObject MagicBox;*/
     
-    public int nbMoneyPlayer;
-    
-
-    
-    public float timer;
 
     public GameObject player;
     
+    
     [Header("Wave and Gameplay Management")]
-    public int nbWave;
+    public int nbWave = -1;
     public float countdownBetweenTwoWaves;
     public int actualNbEnemies, nbEnemies;
     public List<Transform> spawnZombies = new List<Transform>();
-    public List<int> waveList = new List<int>();
+    
+    [Header("Game Over")]
+    public GameObject gameOverMenu;
+    public TMP_Text waveText;
 
 
     #region Singleton
@@ -45,6 +43,7 @@ public class GameplayManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1f;
         player = GameObject.FindWithTag("Player");
         StartWave();
     }
@@ -52,8 +51,6 @@ public class GameplayManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
-
         if (actualNbEnemies <= 0)
         {
             countdownBetweenTwoWaves -= Time.deltaTime;
@@ -71,8 +68,7 @@ public class GameplayManager : MonoBehaviour
     public void UpdateEnemis()
     {
         nbEnemisText.text = $"Remaining : {actualNbEnemies}\n" +
-                            $"Wave : {nbWave}"
-            ;
+                            $"Wave : {nbWave}";
     }
 
     public void UpdateMoney(float nbMoney)
@@ -94,5 +90,14 @@ public class GameplayManager : MonoBehaviour
         }
         
         UpdateEnemis();
+    }
+
+    
+    //GAME OVER
+    public void GameOver()
+    {
+        gameOverMenu.SetActive(true);
+        waveText.text = $"You survived {nbWave} waves.";
+        Time.timeScale = 0f;
     }
 }

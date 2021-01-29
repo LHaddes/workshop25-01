@@ -29,7 +29,7 @@ public class PlayerLife : MonoBehaviour
 
     public void Death()
     {
-        //TODO GAME OVER
+        GameplayManager.gameplayManager.GameOver();
         Destroy(gameObject);
     }
 

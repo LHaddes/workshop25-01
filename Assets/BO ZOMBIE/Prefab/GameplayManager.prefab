@@ -46,12 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nbEnemisText: {fileID: 0}
   nbMoneyText: {fileID: 0}
-  timerText: {fileID: 0}
-  nbMoneyPlayer: 0
-  timer: 0
   player: {fileID: 0}
-  nbWave: 0
+  nbWave: -1
   countdownBetweenTwoWaves: 0
+  actualNbEnemies: 0
   nbEnemies: 0
   spawnZombies:
   - {fileID: 0}
@@ -60,7 +58,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  waveList: 0500000007000000090000000b0000000d0000000f0000001200000015000000180000001b0000001e00000022000000260000002a0000002e00000032000000370000003c00000041000000460000004b00000050000000550000005a00000060000000660000006c00000072000000780000007e000000840000008a00000090000000960000009d000000a4000000ab000000b2000000b9000000
+  gameOverMenu: {fileID: 0}
+  waveText: {fileID: 0}
 --- !u!114 &7099530915215348250
 MonoBehaviour:
   m_ObjectHideFlags: 0
