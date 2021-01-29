@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Pathfinding;
 
-public class EnemiAI : MonoBehaviour
+public class EnemiAI : MonoBehaviour,IPooledObject
 {
     public Transform target;
 
@@ -134,5 +134,9 @@ public class EnemiAI : MonoBehaviour
         }
     }
 
-    
+
+    public void OnObjectSpawn()
+    {
+        life = 5;
+    }
 }
