@@ -11,6 +11,7 @@ public class MysteryBox : MonoBehaviour
     public List<Weapon> weaponList = new List<Weapon>();
     public List<Transform> spawnPoints = new List<Transform>();
     private int _counter;
+    public int bonusCount;
 
     void Start()
     {
@@ -33,6 +34,28 @@ public class MysteryBox : MonoBehaviour
             transform.position = spawnPoints[random].position;
             transform.rotation = spawnPoints[random].rotation;
             _counter = 0;
+        }
+    }
+
+    public void Bonus()
+    {
+        FindObjectOfType<PlayerShoot>().actualWeapon.isBonus = true;
+        int random = Random.Range(0, bonusCount);
+
+        switch (random)
+        {
+            case 0: 
+                FindObjectOfType<PlayerShoot>().actualWeapon.fireRateBonus = true;
+                break;
+            case 1:
+                FindObjectOfType<PlayerShoot>().actualWeapon.infiniteAmmoBonus = true;
+                break;
+            case 2:
+                FindObjectOfType<PlayerShoot>().actualWeapon.allAmmoBonus = true;
+                break;
+            case 3:
+                FindObjectOfType<PlayerShoot>().actualWeapon.damageUpBonus = true;
+                break;
         }
     }
 

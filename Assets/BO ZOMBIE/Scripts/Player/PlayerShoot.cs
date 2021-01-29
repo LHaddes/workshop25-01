@@ -22,7 +22,8 @@ public class PlayerShoot : MonoBehaviour
     private float _reloadTime;
     private bool _isReloading;
     private bool _startCountdownBonus;
-    private float _durationBonus = 10f;
+    public float durationBonus = 10f;
+    private bool notUsingAmmo;
     void Start()
     {
         objectPooler = ObjectPooler.objectPooler;
@@ -37,28 +38,49 @@ public class PlayerShoot : MonoBehaviour
         if (Input.GetButton("Fire1") && Time.time > _nextFire && canShoot)
         {
             fireRate = actualWeapon.fireRate;
-            if (actualWeapon.isBonus)
-            {
-                fireRate /= 2;
-                _startCountdownBonus = true;
-            }
+            
             _nextFire = Time.time + fireRate;
             Shoot(); 
             
             animator.SetBool("IsFiring", true);
         }
-
         
-        if (_startCountdownBonus)
+        
+        if (actualWeapon.isBonus)
         {
-            _durationBonus -= Time.deltaTime;
+            durationBonus -= Time.deltaTime;
+
+            if (actualWeapon.fireRateBonus)
+            {
+                fireRate /= 2;
+                actualWeapon.fireRateBonus = false;
+            }
+            else if(actualWeapon.infiniteAmmoBonus)
+            {
+                notUsingAmmo = true;
+                actualWeapon.infiniteAmmoBonus = false;
+            }
+            else if (actualWeapon.allAmmoBonus)
+            {
+                actualWeapon.Reset();
+                actualWeapon.allAmmoBonus = false;
+                durationBonus = 10f;
+                actualWeapon.isBonus = false;
+            }
+            else if(actualWeapon.damageUpBonus)
+            {
+                actualWeapon.damage *= 2;
+                actualWeapon.damageUpBonus = false;
+            }
         }
 
-        if (_durationBonus <= 0)
+        if (durationBonus <= 0)
         {
             actualWeapon.isBonus = false;
-            _startCountdownBonus = false;
-            _durationBonus = 10f;
+            fireRate *= 2;
+            notUsingAmmo = false;
+            actualWeapon.damage /= 2;
+            durationBonus = 10f;
         }
         
         #region Scroll pour le changement d'armes

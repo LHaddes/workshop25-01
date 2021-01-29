@@ -19,8 +19,10 @@ public class PlayerMovement : MonoBehaviour
     public float score;
     public TextMeshProUGUI txtScore;
 
-    public bool _isNearBox;
-
+    public bool _isNearBox;
+
+
+
     public Animator animator;
 
 
@@ -37,19 +39,23 @@ public class PlayerMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         
-        moveDir = new Vector2(horizontal, vertical);
-
-        animator.SetBool("IsWalking", true);
-
+        moveDir = new Vector2(horizontal, vertical);
+
+
+
+        animator.SetBool("IsWalking", true);
+
+
+
         txtScore.text = $"Score : {score}";
 
         if (_isNearBox)
         {
-            if (Input.GetButtonDown("Interact") /*&& score > other.gameObject.GetComponent<MysteryBox>().cost*/)
+            if (Input.GetButtonDown("Interact") && score > FindObjectOfType<MysteryBox>().cost)
             {
                 Debug.Log("Interaction");
-                Weapon weapon = FindObjectOfType<MysteryBox>().MysteryWeapon();
-                GetComponent<PlayerShoot>().actualWeapon.isBonus = true;
+                //Weapon weapon = FindObjectOfType<MysteryBox>().MysteryWeapon();
+                GetComponent<PlayerShoot>().actualWeapon.fireRateBonus = true;
                 //GetComponent<PlayerShoot>().ReplaceWeapon(weapon);
             }
         }
@@ -86,13 +92,15 @@ public class PlayerMovement : MonoBehaviour
             _isNearBox = true;
             
             other.gameObject.GetComponent<MysteryBox>().uiText.SetActive(true);
+            other.gameObject.GetComponent<MysteryBox>().uiText.GetComponent<TMP_Text>().text +=
+                $"\nCost : {other.gameObject.GetComponent<MysteryBox>().cost}";
 
             if (Input.GetButtonDown("Interact") /*&& score > other.gameObject.GetComponent<MysteryBox>().cost*/)
             {
                 score -= other.gameObject.GetComponent<MysteryBox>().cost;
                 Debug.Log("Interaction");
                 //GetComponent<PlayerShoot>().ReplaceWeapon(other.gameObject.GetComponent<MysteryBox>().MysteryWeapon());
-                GetComponent<PlayerShoot>().actualWeapon.isBonus = true;
+                GetComponent<PlayerShoot>().actualWeapon.fireRateBonus = true;
             }
         }
     }
