@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Weapon")]
 public class Weapon : ScriptableObject
 {
+    public bool isRiffle;
     public bool isBonus;   //Si l'arme tire en automatique ou non
     public bool fireRateBonus, infiniteAmmoBonus, allAmmoBonus, damageUpBonus;
     public int actualAmmo;    //Le nombre actuel de munition de notre chargeur
@@ -16,15 +17,15 @@ public class Weapon : ScriptableObject
     public int damage;
 
 
-    private int saveActualAmmo;
-    private int saveTotalAmmo;
-    private int saveDamage;
-    private float saveFireRate;
+    public int saveActualAmmo;
+    public int saveTotalAmmo;
+    public int saveDamage;
+    public float saveFireRate;
     
 
     public string weaponSound;
-    
-    
+    public Sprite weaponSprite;
+
     void OnEnable()
     {
         isBonus = false;

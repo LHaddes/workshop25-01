@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b99ca6f83ddc424c93913b350ce6a2e, type: 3}
   m_Name: Mitrailleuse
   m_EditorClassIdentifier: 
-  isAuto: 1
   isBonus: 0
+  fireRateBonus: 0
+  infiniteAmmoBonus: 0
+  allAmmoBonus: 0
+  damageUpBonus: 0
   actualAmmo: 100
   magazineAmmo: 100
   totalAmmo: 500
@@ -21,3 +24,4 @@ MonoBehaviour:
   fireRate: 0.2
   damage: 1
   weaponSound: Mitraillette
+  weaponSprite: {fileID: 21300000, guid: 256eb31db1b110c418b9020e7d8b24ae, type: 3}

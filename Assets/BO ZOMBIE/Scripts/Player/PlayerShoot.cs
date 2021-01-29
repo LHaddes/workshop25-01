@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerShoot : MonoBehaviour
 {
@@ -19,12 +20,14 @@ public class PlayerShoot : MonoBehaviour
     public Transform firePoint;
     public ObjectPooler objectPooler;
     public TMP_Text ammoText;
+    public Image weaponSprite;
     private float _reloadTime;
     private bool _isReloading;
     private bool _startCountdownBonus;
     public float durationBonus = 10f;
     private bool notUsingAmmo;
     public bool bonus;
+    public Animator bodyAnimator, weaponAnimator;
     
     
     void Start()
@@ -56,17 +59,14 @@ public class PlayerShoot : MonoBehaviour
             
             if (actualWeapon.fireRateBonus)
             {
-                Debug.Log("firerate");
                 actualWeapon.fireRate /= 2;
             }
             else if(actualWeapon.infiniteAmmoBonus)
             {
-                Debug.Log("infinite");
                 notUsingAmmo = true;
             }
             else if (actualWeapon.allAmmoBonus)
             {
-                Debug.Log("reload");
                 actualWeapon.Reset();
                 actualWeapon.allAmmoBonus = false;
                 durationBonus = 10f;
@@ -75,7 +75,6 @@ public class PlayerShoot : MonoBehaviour
             }
             else if(actualWeapon.damageUpBonus)
             {
-                Debug.Log("damage");
                 actualWeapon.damage *= 2;
             }
         }
@@ -87,7 +86,6 @@ public class PlayerShoot : MonoBehaviour
 
         if (durationBonus <= 0)
         {
-            Debug.Log("fin bonus");
             bonus = false;
             
             if (actualWeapon.fireRateBonus)
@@ -193,8 +191,17 @@ public class PlayerShoot : MonoBehaviour
         #endregion
         
         ammoText.text = $"{actualWeapon.actualAmmo} / {actualWeapon.totalAmmo}";
+        weaponSprite.sprite = actualWeapon.weaponSprite;
 
-        
+
+        if (actualWeapon.isRiffle)
+        {
+            animator.SetBool("isRiffle", true);
+        }
+        else
+        {
+            animator.SetBool("isRiffle", false);
+        }
     }
 
     public void SwitchWeapon(int mouseScroll)

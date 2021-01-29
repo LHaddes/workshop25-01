@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b99ca6f83ddc424c93913b350ce6a2e, type: 3}
   m_Name: Pistolet
   m_EditorClassIdentifier: 
+  isRiffle: 0
   isBonus: 0
   fireRateBonus: 0
   infiniteAmmoBonus: 0
@@ -25,4 +26,7 @@ MonoBehaviour:
   damage: 2
   saveActualAmmo: 6
   saveTotalAmmo: 24
+  saveDamage: 2
+  saveFireRate: 1
   weaponSound: GunShoot
+  weaponSprite: {fileID: 21300000, guid: d6f82db8f8aeb3e4092975802662e9e0, type: 3}

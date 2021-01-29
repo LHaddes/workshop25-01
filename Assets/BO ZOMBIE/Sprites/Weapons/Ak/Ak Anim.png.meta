@@ -11,6 +11,15 @@ TextureImporter:
   - first:
       213: -8110319312660355778
     second: Rifle Anim_2
+  - first:
+      213: 8932899992394775163
+    second: Ak Anim_0
+  - first:
+      213: -5885675127260289688
+    second: Ak Anim_1
+  - first:
+      213: -9175642219158673755
+    second: Ak Anim_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rifle Anim_0
+      name: Ak Anim_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 0
         width: 64
-        height: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f1c4ef1c89a9be70800000000000000
-      internalID: 9131516138765992433
+      spriteID: b7ab7cce63908fb70800000000000000
+      internalID: 8932899992394775163
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rifle Anim_1
+      name: Ak Anim_1
       rect:
         serializedVersion: 2
         x: 64
-        y: 64
+        y: 0
         width: 64
-        height: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 33f4d14929fb835c0800000000000000
-      internalID: -4235424813270872269
+      spriteID: 8656c48c7a1e15ea0800000000000000
+      internalID: -5885675127260289688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rifle Anim_2
+      name: Ak Anim_2
       rect:
         serializedVersion: 2
         x: 128
-        y: 64
+        y: 0
         width: 64
-        height: 64
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,8 +173,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e35a3e13e8b527f80800000000000000
-      internalID: -8110319312660355778
+      spriteID: 5a668fc240299a080800000000000000
+      internalID: -9175642219158673755
       vertices: []
       indices: 
       edges: []
