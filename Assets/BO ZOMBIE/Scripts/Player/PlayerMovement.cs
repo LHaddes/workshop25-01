@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
         AnimatorWalking.SetBool("IsWalking", true);
 
-        txtScore.text = $"Score : {score}";
+        txtScore.text = $"Score : " + score.ToString("F0");
 
         if (Input.GetButtonDown("Interact"))
         {
